@@ -1,6 +1,6 @@
 body{
     color:#535353;
-    font-family: Lexend;
+    font-family: 'Carmen Sans';
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -23,7 +23,7 @@ button:not(.accordion-button){
     outline: none;
     border-radius: 0.5rem;
     padding: 0.5rem 2rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.03em;
     background: #555BB9;
     color: white;
@@ -40,7 +40,6 @@ button:not(.accordion-button):hover{
     padding: 1rem;
     padding-bottom: 0;
     width: 100%;
-    background-color: white;
     z-index: 1000;
 
 }
@@ -51,10 +50,22 @@ button:not(.accordion-button):hover{
 
 .cndce-header{
     width: 100%;
-    background-color: #F5F5F5;
     border-radius: 16px;
     padding: 0.7rem;
     align-items: center;
+
+}
+
+
+
+.cndce-header-logo{
+    height: 3rem;
+    transition: transform 0.5s cubic-bezier(0.42, 0, 0, 1.68);
+    transform-origin: top left;
+}
+
+.cndce-header-wrapper.top .cndce-header-logo{
+    transform: scale(2.6); 
 }
 
 .cndce-header-items{
@@ -65,7 +76,19 @@ button:not(.accordion-button):hover{
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.03em;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+    font-weight: 800;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+
+    transition: all 0.5s ease-in-out;
+}
+
+.cndce-header-wrapper.top .cndce-header-item{
+    transform: translate3d(0, 2rem, 0);
 }
 
 
@@ -77,26 +100,41 @@ button:not(.accordion-button):hover{
     transition: all 0.3s ease-in-out;
 }
 
+.cndce-header-item:hover{
+    background-color: #52C240;
+
+}
+
 .cndce-header-item:hover a{
-    color: #52C240;
+    color: white;
 
 }
 
 .section-container{
     min-height: 100vh;
     padding-top: 6rem;
-    padding-bottom: 3rem;
+    /* padding-bottom: 3rem; */
     position: relative;
 }
 
-/* Section 1 */
-.section-1 .welcome-text{
-    font-size: 1.1rem;
+.cndce-section-border-bottom{
+    border-bottom: 9px solid #efefef;
 }
 
-.section-1 .cndce-about-image{
-    width: 100%;
+/* Section 1 */
+.section-about{
+    background-image: url("assets/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    min-height: max(510px, 100vh);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
 }
+
 
 
 /* Section 2 */
@@ -147,8 +185,20 @@ button:not(.accordion-button):hover{
     border-radius: 14px;
 }
 
+.section-2 .cndce-about-text{
+    font-size: 0.8rem;
+    line-height: 150%;
+}
+
+.section-2 .cndce-about-image{
+    width:75%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3rem;
+}
+
 .section-2 .cndce-junglee-cards-container{
-    width: 700px;
+    /* width: 700px; */
     margin: 0 auto;
 }
 
@@ -168,7 +218,7 @@ button:not(.accordion-button):hover{
 }
 
 .section-2 .cndce-junglee-title-container{
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 }
 
 .section-2 .cndce-junglee-text{
@@ -220,10 +270,11 @@ button:not(.accordion-button):hover{
 
 .cndce-cost-mint-container{
     background-color: #6D75E7;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: white;
-    text-align: left;
-    padding: 2rem 3rem;
+    /* text-align: left; */
+    /* padding: 2rem 3rem; */
+    min-height: unset;
 }
 
 .cndce-mint-get-started{
@@ -344,13 +395,14 @@ button:not(.accordion-button):hover{
 .section-roadmap .cndce-roadmap{
     width: 900px;
     margin: 0 auto;
+    align-items: flex-start;
 }
 
 .section-roadmap .cndce-roadmap-title{
-    height: 100vh;
-    display: flex;
-    top: 0;
-    align-items: center;
+    /* height: 100vh; */
+    /* display: flex; */
+    top: 6rem;
+    /* align-items: flex-start; */
     position: -webkit-sticky;
     position: sticky;
 }
