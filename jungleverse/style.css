@@ -416,17 +416,40 @@ button:not(.accordion-button):hover{
     left: 26px;
 }
 
+.section-roadmap .cndce-timeline-wrapper::before{
+    content: "";
+    background-image: url("assets/timeline-bar.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -3px;
+    right: -3px;
+
+    
+}
+
 .section-roadmap .cndce-timeline-item{
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
+    opacity: 0.5;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.section-roadmap .cndce-timeline-item:hover,
+.section-roadmap .cndce-timeline-item.active{
+    opacity: 1;
 }
 
 .section-roadmap .cndce-timeline-item::before{
     content: "";
     display: block;
-    background-color: #f3cf04;
-    box-shadow: 0 2px 9px 0 rgb(243 207 4 / 71%);
+    background-color: #ffed8a;
     color: #f3cf04;
 
     flex-grow: 0;
@@ -438,12 +461,23 @@ button:not(.accordion-button):hover{
     margin-top: 0px;
     padding-top: 0px;
     border-style: solid;
-    border-width: 3px;
+    border-width: 5px;
     border-color: #fff;
     border-radius: 50%;
     position: relative;
 
     margin-right: 3rem;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.section-roadmap .cndce-timeline-item:hover::before,
+.section-roadmap .cndce-timeline-item.active::before{
+    background-color: #f3cf04;
+    border-width: 5px;
+    transform: scale(1.1);
+    box-shadow: 0 2px 9px 0 rgb(243 207 4 / 71%);
+
 }
 
 .section-roadmap .cndce-timeline-card{
