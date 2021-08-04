@@ -18,7 +18,7 @@
         Array.from(domTimelineItems).forEach(function(el){
             const pos = el.getBoundingClientRect();
 
-            if(pos.top + pos.height / 2 - window.innerHeight / 1.5 <= 0){
+            if(pos.top - window.innerHeight / 2 <= 0){
                 el.classList.add('active');
             }else{
                 el.classList.remove('active');
