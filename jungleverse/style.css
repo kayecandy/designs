@@ -652,20 +652,22 @@ body.roadmap::before{
     content: "";
     background: white;
     height: 100%;
-    width: 11px;
+    width: 12px;
     left: 0;
     top: 0;
     position: absolute;
+    margin-left: -1px;
 }
 
 .section-roadmap .cndce-timeline-wrapper::after{
     content: "";
     background: white;
     height: 100%;
-    width: 11px;
+    width: 12px;
     right: 0;
     top: 0;
     position: absolute;
+    margin-right: -1px;
 }
 
 .section-roadmap .cndce-timeline-bar{
