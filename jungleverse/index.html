@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -14,23 +15,24 @@
 
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Self -->
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css?v0.2.2'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css?v0.3'>
 
 </head>
+
 <body>
 
     <div id="cndce-header-wrapper" class="cndce-header-wrapper">
         <div class="cndce-header d-flex">
             <div class="col-auto ms-1"><img class="cndce-header-logo" src="./assets/logo.png"></div>
-    
+
             <div class="cndce-header-items col-auto d-flex">
-                <div class="cndce-header-item"><a href="#about">About</a></div>
-                <div class="cndce-header-item"><a href="#usage">Usage</a></div>
-                <div class="cndce-header-item"><a href="#cost">Cost</a></div>
-                <div class="cndce-header-item"><a href="#plan">Plan</a></div>
+                <div class="cndce-header-item"><a href="#mint">Mint</a></div>
+                <div class="cndce-header-item"><a href="#$jungle">$Jungle</a></div>
+                <div class="cndce-header-item"><a href="#roadmap">Roadmap</a></div>
                 <div class="cndce-header-item"><a href="#team">Team</a></div>
                 <div class="cndce-header-item"><a href="#faq">FAQ</a></div>
             </div>
@@ -41,8 +43,8 @@
     <!-- <div class="cndce-header-spacer"></div> -->
 
 
-    <div id="about" class="section-container section-about pb-5">
-        
+    <div id="mint" class="section-container section-about pb-5">
+
         <button class="adopt-now">Adopt Now</button>
     </div>
 
@@ -58,43 +60,217 @@
         <div class="row" style="text-align: left;">
             <div class="col-6">
                 <div class="welcome-text">Welcome to the</div>
-                <div><img src="./assets/Jungleverse.svg"></div>
+                <div><img src="./assets/Jungleverse.svg" height="40"></div>
 
                 <div class="cndce-about-text my-5">
-                    Jungleverse is a multiplayer, play-to-earn game launching on the Ethereum blockchain. You can battle, breed, and earn $JUNGLE with your Jungleverse characters, also known as Junglees.There are 30 gen-1 species of Junglees that currently live in the Jungleverse. Each Junglee is a programmatically generated NFT and only a total of 10,000 of them will ever be up for adoption.  
+                    Jungleverse is a multiplayer, play-to-earn game launching on the Ethereum blockchain. You can
+                    battle, breed, and earn $JUNGLE with your Jungleverse characters, also known as Junglees.There are
+                    30 gen-1 species of Junglees that currently live in the Jungleverse. Each Junglee is a
+                    programmatically generated NFT and only a total of 10,000 of them will ever be up for adoption.
                 </div>
 
                 <div class="row cndce-junglee-cards-container my-5 align-items-stretch">
                     <div class="col-6 ps-0">
-        
+
                         <div class="cndce-junglee-card" style="background-color: #FF4F52;">
                             <div class="cndce-junglee-title-container">
-                                <div>#NFT</div>
                                 <h4>ERC 721</h4>
                             </div>
-            
-                            <p class="cndce-junglee-text mb-5">Each Junglee is an ERC 721 token that is randomly generated from over 300k possible combinations.</p>
-            
-                            <button class="cndce-junglee-read-more">Read More</button>
-        
+
+                            <p class="cndce-junglee-text mb-5">Each Junglee is an ERC 721 token that is randomly
+                                generated from over 300k possible combinations.</p>
+
+                            <button class="cndce-junglee-read-more" data-bs-toggle="modal" data-bs-target="#erc721">Read More</button>
+
+                        </div>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade cndce-junglee-read-more-modal" id="erc721" tabindex="-1" aria-labelledby="erc721Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: #FF4F52;">
+                                        <h5 class="modal-title" id="erc721Label">ERC-721 Junglees</h5>
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ol>
+                                            <li>
+                                                <p><b>
+                                                    What are Junglees?
+                                                </b></p>
+
+                                                <p>
+                                                    $Junglees are a collection of 10,000 ERC 721 tokens that are stored on the Ethereum Blockchain. You can use your Junglee to battle, breed and earn $JUNGLE tokens in the Jungleverse game.  
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>
+                                                    How do I adopt a Junglee? 
+                                                </b></p>
+
+                                                <p>
+                                                    You can adopt your Junglee from our website. Once all 10,000 gen-1 characters are adopted, you can get them from the secondary market on opensea. 
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><b>
+                                                    How many species of Junglees are there? 
+                                                </b></p>
+
+                                                <p>
+                                                    There are 30 species of Junglees that currently roam the Jungleverse. 
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><b>Will the team create and sell new Junglees after the initial sale? </b></p>
+                                                <p>
+                                                    No, the team will not offer any new Junglees after the initial sale. The only way to create new ones is by breeding them. Holders of Gen-1 Junglees will be able to breed and create new hybrid species and thereby define the future of the Jungleverse. 
+                                                </p>
+                                            </li>
+                                        </ol>
+
+                                    </div>
+                                    <div class="modal-footer d-none">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-        
+
                     <div class="col-6 pe-0">
-        
+
                         <div class="cndce-junglee-card" style="background-color: #399EE2;">
                             <div class="cndce-junglee-title-container">
-                                <div>#NFT</div>
                                 <h4>ERC 20</h4>
                             </div>
-            
-                            <p class="cndce-junglee-text mb-5">With every Junglee you adopt, you will receive 500 $JUNGLE tokens, the in-game ERC20 currency that accrues 100% APR (Upto a year).</p>
-            
-                            <button class="cndce-junglee-read-more">Read More</button>
-        
+
+                            <p class="cndce-junglee-text mb-5">With every Junglee you adopt, you will receive 500
+                                $JUNGLE tokens, the in-game ERC20 currency that accrues 100% APR (Upto a year).</p>
+
+                            <button class="cndce-junglee-read-more" data-bs-toggle="modal" data-bs-target="#erc20">Read More</button>
+
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade cndce-junglee-read-more-modal" id="erc20" tabindex="-1" aria-labelledby="erc20Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: #399EE2;">
+                                        <h5 class="modal-title" id="erc20Label">ERC 20 $JUNGLE</h5>
+                                        
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ol>
+                                            <li>
+                                                <p><b>
+                                                    What is $JUNGLE? 
+                                                </b></p>
+
+                                                <p>
+                                                    $Jungle is an ERC-20 token that can be used as currency in the Jungleverse.
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>
+                                                    What can I do with $JUNGLE?
+                                                </b></p>
+
+                                                <p>Initially, you can use it to change the name of your Junglee and give it a unique identity. Once the game is launched, you can use $JUNGLE to breed your Junglees, forge weapons and buy in-game items. </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>
+                                                    How much $JUNGLE do I get when I adopt a Junglee?
+                                                </b></p>
+
+                                                <p>
+                                                    You will receive 500 $JUNGLE tokens/ Junglee. This accrues 100% APR (Upto a year)
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>
+                                                    What happens if I sell my Jungleverse NFT during the 1 year $JUNGLE accrual period? 
+                                                </b></p>
+
+                                                <p>
+                                                    If/when you sell your Junglee before the 1 year period is complete, the new owner of the NFT will be entitled to receive the pending $JUNGLE tokens from the date of sale. 
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>
+                                                    How can I get more $JUNGLE?
+                                                </b></p>
+
+                                                <p>
+                                                    We do not offer an exchange or marketplace for $JUNGLE. Currently, the only way to get more $JUNGLE is to transfer it from another wallet that holds the token. Once the game launches, you can earn $JUNGLE by playing the game and completing in-game missions.
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>
+                                                    What is the tokenomics behind $JUNGLE?
+                                                </b></p>
+
+                                                <p>
+                                                    When it comes to tokenomics, the number of $JUNGLE in circulation is rather fluid and does not have a hard cap. This is because the tokens are burned whenever new Junglees are bred. 
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>
+                                                    What is the current supply of $JUNGLE?
+                                                </b></p>
+
+                                                <p>
+                                                    At launch, there will be a supply of 11,000,000 $JUNGLE tokens.
+                                                </p>
+
+                                                <p><ul>
+                                                    <li>
+                                                        5,000,000 distributed to the public at the mint
+                                                    </li>
+                                                    <li>
+                                                        500,000 for the Jungleverse Team at launch 
+                                                    </li>
+                                                    <li>5,000,000 generated by Jungleverse NFTs over 1 year</li>
+                                                    <li>500,000 for the Jungleverse team over 1 year</li>
+                                                </ul></p>
+
+                                                <p>
+                                                    $JUNGLE allocated to the team will be used at the discretion of the team. This may be used to provide liquidity and giveaways among other things. 
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <p><b>How do I add $JUNGLE to my MetaMask?</b></p>
+
+                                                <p>
+                                                    Create a custom token with this token address: <i>TBA</i>
+                                                </p>
+                                            </li>
+                                        </ol>
+
+                                    </div>
+                                    <div class="modal-footer d-none">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-        
+
                 </div>
             </div>
 
@@ -103,27 +279,30 @@
             </div>
         </div>
 
-        
-        
 
-        
 
-        
+
+
+
+
     </div>
 
-    <div class="container section-container section-3 text-center">
+    <div id="$jungle" class="container section-container section-3 text-center">
 
-        <h5 style="font-weight: normal;">What can I do with</h5>
+        <h5 style="font-weight: normal;">What can I do with my</h5>
         <img class="mb-4" src="./assets/Jungle&Junglee.svg">
 
         <div class="cndce-card-container row mt-5">
             <!-- Card -->
             <div class="col-6">
                 <div class="cndce-card">
-                    <img class="cndce-card-img" src="./assets/card-image.png">
+                    <img class="cndce-card-img" src="./assets/name-your-junglee.png">
                     <div class="p-4">
                         <h6 class="cndce-card-title mb-3">Naming your Junglee</h6>
-                        <p class="cndce-card-content">Give your Junglee a unique name and identity. Your character’s name will be stored and publicly visible on the Ethereum Blockchain. This identity can be changed anytime later in the future for free. To change the name of your Junglee, you will need to spend 150 $JUNGLE.</p>
+                        <p class="cndce-card-content">Give your Junglee a unique name and identity. Your character’s
+                            name will be stored and publicly visible on the Ethereum Blockchain. This identity can be
+                            changed anytime later in the future for free. To change the name of your Junglee, you will
+                            need to spend 150 $JUNGLE.</p>
                     </div>
                 </div>
             </div>
@@ -131,10 +310,13 @@
             <!-- Card -->
             <div class="col-6">
                 <div class="cndce-card">
-                    <img class="cndce-card-img" src="./assets/card-image.png">
+                    <img class="cndce-card-img" src="./assets/breeding.png">
                     <div class="p-4">
                         <h6 class="cndce-card-title mb-3">Breed</h6>
-                        <p class="cndce-card-content">There are 30 species of Junglees that currently live in the Jungleverse. You can use $JUNGLE to breed two different Gen-1 species of Junglees to create a new hybrid species. This newly created Gen-2 species of Junglee will have characteristics of both its parents.</p>
+                        <p class="cndce-card-content">There are 30 species of Junglees that currently live in the
+                            Jungleverse. You can use $JUNGLE to breed two different Gen-1 species of Junglees to create
+                            a new hybrid species. This newly created Gen-2 species of Junglee will have characteristics
+                            of both its parents.</p>
                     </div>
                 </div>
             </div>
@@ -145,7 +327,9 @@
                     <img class="cndce-card-img" src="./assets/card-image.png">
                     <div class="p-4">
                         <h6 class="cndce-card-title mb-3">Battle</h6>
-                        <p class="cndce-card-content">Jungleverse will be an ever expanding world where you can use your Junglee to battle other Junglees or fight menacing robots. Level up your Junglee to earn $JUNGLE.</p>
+                        <p class="cndce-card-content">Jungleverse will be an ever expanding world where you can use your
+                            Junglee to battle other Junglees or fight menacing robots. Level up your Junglee to earn
+                            $JUNGLE.</p>
                     </div>
                 </div>
             </div>
@@ -157,14 +341,16 @@
                     <img class="cndce-card-img" src="./assets/card-image.png">
                     <div class="p-4">
                         <h6 class="cndce-card-title mb-3">Claim Future Drops</h6>
-                        <p class="cndce-card-content">Owning a Junglee gives you exclusive access to claim future Jungleverse drops free of charge.The first of which will be weapons and companions that will hold utility in the game.</p>
+                        <p class="cndce-card-content">Owning a Junglee gives you exclusive access to claim future
+                            Jungleverse drops free of charge.The first of which will be weapons and companions that will
+                            hold utility in the game.</p>
                     </div>
                 </div>
             </div>
 
 
         </div>
-    
+
     </div>
 
     <!-- Cost to mint -->
@@ -173,16 +359,14 @@
         <div class="cndce-cost-mint-container text-center">
             <div class="py-3" style="font-weight: 800; text-transform: uppercase;">
                 <span>Cost to mint</span>
-                <span>|</span>
-                <span>0.05</span>
             </div>
 
-            <div class="py-3" style="background-color: #878ee9;" >
-                <button class="cndce-mint-get-started">Mint Now</button>
+            <div class="py-3" style="background-color: #878ee9;">
+                <button class="cndce-mint-get-started">0.05E</button>
             </div>
         </div>
 
-        
+
     </div>
 
     <div id="background" class="section-container container cndce-section-border-bottom">
@@ -192,7 +376,9 @@
                 <div><img src="./assets/background.svg"></div>
 
                 <div class="cndce-about-text my-5">
-                    We all love to show off our NFTs in our profile picture and that’s why we have created an avatar generator tool that will crop your Junglee to the perfect size and also allow you to add a custom background! 
+                    We all love to show off our NFTs in our profile picture and that’s why we have created an avatar
+                    generator tool that will crop your Junglee to the perfect size and also allow you to add a custom
+                    background!
                 </div>
 
                 <button>Check it out!</button>
@@ -206,7 +392,8 @@
     </div>
 
 
-    <div id="plan" class="container section-container section-roadmap  cndce-section-border-bottom">
+    <div id="roadmap" class="container section-container section-roadmap  cndce-section-border-bottom">
+
         <div id="cndce-roadmap" class="cndce-roadmap row mb-5">
             <div class="cndce-roadmap-title col-5">
                 <div>
@@ -217,7 +404,7 @@
 
             <div class="col-7 position-relative">
                 <div id="cndce-timeline-wrapper" class="cndce-timeline-wrapper">
-                    
+
                 </div>
 
                 <div class="cndce-timeline-item">
@@ -252,13 +439,13 @@
                         <ul>
                             <li>
                                 Jungleverse Breeding & Game Encyclopedia
-                                
+
                             </li>
                             <li>
                                 In-house Marketplace
                             </li>
                             <li>
-                                Breeding game launched
+                                Breeding Mechanics Released
                             </li>
                             <li>
                                 Battleground Game- Alpha
@@ -276,8 +463,6 @@
                             </li>
                             <li>
                                 Jungleverse Land
-                            </li>
-                            <li>
                             </li>
                             <li>
                                 Adventure Game
@@ -304,55 +489,55 @@
         <div class="cndce-rect cndce-rect-5"></div>
 
         <div class="cndce-team-container row my-5">
-            <div class="col-4 px-4">
+            <div class="col-3 px-4">
                 <div class="cndce-team-card">
                     <div class="cndce-team-img">
                         <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
                         <img src="./assets/team.png">
                     </div>
                     <div class="py-4">
-                        <h4 class="mb-0">Mehul Sharma</h4>
+                        <h4 class="mb-0">Nolol</h4>
                         <p>I Design</p>
                     </div>
 
-                    <div class="cndce-team-socials">
+                    <div class="cndce-team-socials d-none">
                         <a class="cndce-team-social" href="#">
-                            <img  src="./assets/twitter.svg">
+                            <img src="./assets/twitter.svg">
                         </a>
 
                         <a class="cndce-team-social" href="#">
                             <img src="./assets/linkedin.svg">
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
 
-            <div class="col-4 px-4">
+            <div class="col-3 px-4">
                 <div class="cndce-team-card">
                     <div class="cndce-team-img">
                         <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
                         <img src="./assets/team.png">
                     </div>
                     <div class="py-4">
-                        <h4 class="mb-0">Ankur Chopra</h4>
+                        <h4 class="mb-0">kleck0</h4>
                         <p>I Solve</p>
                     </div>
 
-                    <div class="cndce-team-socials">
+                    <div class="cndce-team-socials d-none">
                         <a class="cndce-team-social" href="#">
-                            <img  src="./assets/twitter.svg">
+                            <img src="./assets/twitter.svg">
                         </a>
 
                         <a class="cndce-team-social" href="#">
                             <img src="./assets/linkedin.svg">
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
 
-            <div class="col-4 px-4">
+            <div class="col-3 px-4">
                 <div class="cndce-team-card">
                     <div class="cndce-team-img">
                         <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
@@ -363,16 +548,40 @@
                         <p>I Create</p>
                     </div>
 
-                    <div class="cndce-team-socials">
+                    <div class="cndce-team-socials d-none">
                         <a class="cndce-team-social" href="#">
-                            <img  src="./assets/twitter.svg">
+                            <img src="./assets/twitter.svg">
                         </a>
 
                         <a class="cndce-team-social" href="#">
                             <img src="./assets/linkedin.svg">
                         </a>
                     </div>
-                    
+
+                </div>
+            </div>
+
+            <div class="col-3 px-4">
+                <div class="cndce-team-card">
+                    <div class="cndce-team-img">
+                        <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
+                        <img src="./assets/team.png">
+                    </div>
+                    <div class="py-4">
+                        <h4 class="mb-0">0xVibe</h4>
+                        <p>I Create</p>
+                    </div>
+
+                    <div class="cndce-team-socials d-none">
+                        <a class="cndce-team-social" href="#">
+                            <img src="./assets/twitter.svg">
+                        </a>
+
+                        <a class="cndce-team-social" href="#">
+                            <img src="./assets/linkedin.svg">
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -380,88 +589,133 @@
 
 
     <div id="faq" class="container section-container section-faqs">
-        <h5 style="font-weight: normal;">Still have doubts ? Check our </h5>
+        <h5 style="font-weight: normal;">Still have doubts? Check our </h5>
         <img class="mb-4" src="./assets/FAQ.svg">
 
 
         <div class="accordion accordion-flush my-4" id="accordionFlushExample">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    What wallets do you support?
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    The Jungleverse website is compatible with Metamask. You can download the Metamask browser extension <a href="#">here</a>
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        What wallets do you support?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        The Jungleverse website is compatible with Metamask. You can download the Metamask browser
+                        extension <a href="#">here</a>
+                    </div>
                 </div>
-              </div>
             </div>
 
 
             <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    What is the process of adopting a Junglee?
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    <div>
-                        ●	Get the MetaMask extension for Google Chrome.
-                    </div>
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        What is the process of adopting a Junglee?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div>
+                            ● Get the MetaMask extension for Google Chrome.
+                        </div>
 
-                    <div>
-                        ●	Load it with ETH. You can also buy through services that allow you to change your money (fiat) to ETH like Coinbase, RobinHood, Rainbow, or Paypal, and then send to your MetaMask wallet.
-                    </div>
+                        <div>
+                            ● Load it with ETH. You can also buy through services that allow you to change your money
+                            (fiat) to ETH like Coinbase, RobinHood, Rainbow, or Paypal, and then send to your MetaMask
+                            wallet.
+                        </div>
 
-                    <div>
-                        ●	Finally, click the button that says “Connect your Wallet” to allow our site to register you with your address
-                    </div>
+                        <div>
+                            ● Finally, click the button that says “Connect your Wallet” to allow our site to register
+                            you with your address
+                        </div>
 
-                    <div>
-                        ●	Then set a quantity and click adopt on this site. Once you have approved your purchase on Metamask, give it some time for the transaction to go through, And Voila! You have adopted your own Junglee! 
+                        <div>
+                            ● Then set a quantity and click adopt on this site. Once you have approved your purchase on
+                            Metamask, give it some time for the transaction to go through, And Voila! You have adopted
+                            your own Junglee!
+                        </div>
                     </div>
                 </div>
-              </div>
             </div>
 
             <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    How many Junglees are up for adoption?
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">There are a total of 10,000 Junglees that are up for adoption.</div>
-              </div>
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        How many Junglees are up for adoption?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">There are a total of 10,000 Junglees that are up for adoption.</div>
+                </div>
             </div>
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    How many Junglees can I adopt in one transaction?
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        How many Junglees can I adopt in one transaction?
                     </button>
                 </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">You can adopt upto 20 Junglees/ transaction</div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                         Can I trade my Junglee?
                     </button>
                 </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Yes, Junglees can be traded on OpenSea.io. In the future, you can directly trade your Junglees on the Jungleverse Marketplace. </div>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Yes, Junglees can be traded on OpenSea.io. In the future, you can
+                        directly trade your Junglees on the Jungleverse Marketplace. </div>
                 </div>
             </div>
 
         </div>
 
     </div>
+
+
+
+    <footer>
+
+        <a class="footer-social" target="_blank" href="https://twitter.com/jungleverseIO">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M21.5156 5.125C22.4531 4.42188 23.2969 3.57812 23.9531 2.59375C23.1094 2.96875 22.125 3.25 21.1406 3.34375C22.1719 2.73438 22.9219 1.79688 23.2969 0.625C22.3594 1.1875 21.2812 1.60938 20.2031 1.84375C19.2656 0.859375 18 0.296875 16.5938 0.296875C13.875 0.296875 11.6719 2.5 11.6719 5.21875C11.6719 5.59375 11.7188 5.96875 11.8125 6.34375C7.73438 6.10938 4.07812 4.14062 1.64062 1.1875C1.21875 1.89062 0.984375 2.73438 0.984375 3.67188C0.984375 5.35938 1.82812 6.85938 3.1875 7.75C2.39062 7.70312 1.59375 7.51562 0.9375 7.14062V7.1875C0.9375 9.57812 2.625 11.5469 4.875 12.0156C4.5 12.1094 4.03125 12.2031 3.60938 12.2031C3.28125 12.2031 3 12.1562 2.67188 12.1094C3.28125 14.0781 5.10938 15.4844 7.26562 15.5312C5.57812 16.8438 3.46875 17.6406 1.17188 17.6406C0.75 17.6406 0.375 17.5938 0 17.5469C2.15625 18.9531 4.73438 19.75 7.54688 19.75C16.5938 19.75 21.5156 12.2969 21.5156 5.78125C21.5156 5.54688 21.5156 5.35938 21.5156 5.125Z"
+                    fill="#fff" />
+            </svg>
+        </a>
+
+        <a class="footer-social" target="_blank" href="http://discord.gg/fQEbhEUhwv">
+            <svg width="71" height="55" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                    <path
+                        d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z"
+                        fill="#ffffff" />
+                </g>
+                <defs>
+                    <clipPath id="clip0">
+                        <rect width="71" height="55" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+    </footer>
 
 
 
@@ -470,11 +724,14 @@
 
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
     <!-- Self -->
-    <script src='./script.js?v0.2.2'></script>
+    <script src='./script.js?v0.3'></script>
 
-    
+
 </body>
+
 </html>

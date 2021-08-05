@@ -25,7 +25,7 @@ button:not(.accordion-button){
     padding: 0.5rem 2rem;
     font-weight: 800;
     letter-spacing: 0.03em;
-    background: #555BB9;
+    background-color: #555BB9;
     color: white;
 
     transition: transform 0.3s cubic-bezier(0.93, 0.52, 0.11, 1.57)
@@ -37,11 +37,23 @@ button:not(.accordion-button):hover{
 
 .cndce-header-wrapper{
     position: fixed;
-    padding: 1rem;
-    padding-bottom: 0;
     width: 100%;
     z-index: 1000;
 
+    background: #f5f5f5;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+
+    box-shadow: 0px 0px 1px rgb(12 26 75 / 24%), 0px 3px 15px -1px rgb(50 50 71 / 5%);
+
+}
+
+.cndce-header-wrapper.top{
+    padding: 1rem;
+    padding-bottom: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .cndce-header-spacer{
@@ -76,19 +88,21 @@ button:not(.accordion-button):hover{
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.03em;
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
 
     background-color: whitesmoke;
     border-radius: 1rem;
     margin: 0 0.5rem;
     font-weight: 800;
-    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    box-shadow: none;
 
     transition: all 0.5s ease-in-out;
 }
 
 .cndce-header-wrapper.top .cndce-header-item{
     transform: translate3d(0, 2rem, 0);
+
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
 }
 
 
@@ -96,6 +110,9 @@ button:not(.accordion-button):hover{
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+
+    display: block;
+    padding: 0 1.5rem;
 
     transition: all 0.3s ease-in-out;
 }
@@ -239,6 +256,35 @@ button:not(.accordion-button):hover{
     margin-top: auto;
     background-color: black;
     color: white;
+}
+
+
+.cndce-junglee-read-more-modal .modal-title{
+    font-weight: 800;
+    text-align: center;
+    flex-grow: 1;
+    color: white;
+}
+
+.cndce-junglee-read-more-modal .modal-header .btn-close{
+    background-color: transparent;
+}
+.cndce-junglee-read-more-modal .modal-header .btn-close:hover{
+    transform: none;
+}
+
+.cndce-junglee-read-more-modal .modal-content{
+    border-radius: 1.5rem;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.cndce-junglee-read-more-modal .modal-footer{
+    justify-content: center;
+}
+
+.cndce-junglee-read-more-modal .modal-footer button{
+    background: black;
 }
 
 
@@ -498,6 +544,10 @@ button:not(.accordion-button):hover{
     flex-grow: 1;
 }
 
+.section-roadmap .cndce-timeline-card ul{
+    list-style: "✅";
+}
+
 
 
 /* Section FAQs */
@@ -532,4 +582,37 @@ button:not(.accordion-button):hover{
 
 .section-faqs .accordion-body a{
     font-weight: 600;
+}
+
+
+/* Footer */
+footer{
+    background: #42d97d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3rem;
+
+    margin-top: 6rem;
+}
+
+footer .footer-social{
+    height: 2rem;
+    display: block;
+    padding: 0 1.5rem;
+}
+
+footer .footer-social svg{
+    height: 100%;
+    width: auto;
+}
+
+footer .footer-social svg path{
+    transition: all 0.3s ease-in-out;
+}
+
+footer .footer-social:hover svg path{
+    fill: #3e3e3e;
 }
