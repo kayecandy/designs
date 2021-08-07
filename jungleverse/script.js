@@ -13,6 +13,7 @@
     const domAdoptQuantityMinus = document.getElementById('cndce-adopt-modal-quantity-btn-minus');
     const domAdoptQuantityPlus = document.getElementById('cndce-adopt-modal-quantity-btn-plus');
     const domAdoptQuantityValue = document.getElementById('cndce-adopt-modal-quantity-value');
+    const domAdoptPrice = document.getElementById('cndce-adopt-modal-price');
 
 
     function initHeaderSticky(){
@@ -50,10 +51,12 @@
 
 
     function updateAdoptQuantityValue(delta){
-        const value = parseInt(domAdoptQuantityValue.innerText);
+        const value = parseInt(domAdoptQuantityValue.innerText) + delta;
 
-        if(value + delta >= domAdoptQuantity.dataset.min && value + delta <= domAdoptQuantity.dataset.max){
-            domAdoptQuantityValue.innerText = value + delta;
+        if(value >= domAdoptQuantity.dataset.min && value <= domAdoptQuantity.dataset.max){
+            domAdoptQuantityValue.innerText = value;
+
+            domAdoptPrice.innerText = (domAdoptPrice.dataset.baseprice * value).toFixed(2);
         }
 
     }

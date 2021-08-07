@@ -20,7 +20,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Self -->
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css?v0.3.4'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css?v0.4'>
 
 </head>
 
@@ -28,15 +28,26 @@
 
     <div id="cndce-header-wrapper" class="cndce-header-wrapper">
         <div class="cndce-header d-flex">
-            <div class="col-auto ms-1"><img class="cndce-header-logo" src="./assets/logo.png"></div>
+            <div class="col-auto ms-1 me-auto"><img class="cndce-header-logo" src="./assets/logo.png"></div>
 
             <div class="cndce-header-items col-auto d-flex">
-                <div class="text-end"><button id="cndce-menu-close" class="cndce-menu-close">x</button></div>
+                <div class="d-flex align-items-center">
+                    <button class="cndce-disconnected-btn mobile my-4 ps-2">Disconnected</button>
+                    
+                    <button id="cndce-menu-close" class="cndce-menu-close">x</button>
+                </div>
+                
+                
+                
                 <div class="cndce-header-item"><a href="#mint">Mint</a></div>
-                <div class="cndce-header-item"><a href="./jungle.html">$Jungle</a></div>
+                <div class="cndce-header-item"><a href="./erc20.html">$Jungle</a></div>
                 <div class="cndce-header-item"><a href="#roadmap">Roadmap</a></div>
                 <div class="cndce-header-item"><a href="#team">Team</a></div>
                 <div class="cndce-header-item"><a href="#faq">FAQ</a></div>
+            </div>
+
+            <div class="ms-auto cndce-disconnected-container">
+                <button class="cndce-disconnected-btn">Disconnected</button>
             </div>
 
             <div id="cndce-mobile-menu" class="cndce-header-burger">
@@ -48,7 +59,7 @@
 
     <!-- Modal -->
     <div class="modal fade cndce-adopt-modal" id="modalAdopt" tabindex="-1" aria-labelledby="modalAdoptLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header p-0">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -56,7 +67,7 @@
                 <div class="modal-body">
                     <div class="cndce-adopt-modal-e px-4 py-5">
                         <img style="height: 1.5rem" class="me-2" src="./assets/icon-adopt.svg">
-                        <div>0.004</div>
+                        <div id="cndce-adopt-modal-price" data-baseprice="0.05">0.05</div>
                     </div>
 
                     <div id="cndce-adopt-modal-quantity" class="cndce-adopt-modal-quantity py-4 mt-3" data-max="20" data-min="1">
@@ -390,9 +401,11 @@
         <div class="cndce-bg-animated" style="padding-bottom: 6rem; position: relative;">
 
             <div id="$jungle" class="container section-container section-3 text-center">
-    
-                <h5 class="text-uppercase" style="font-weight: normal;">What can I do with my</h5>
-                <img class="mb-4" src="./assets/Jungle&Junglee.svg" style="height: 3rem; max-width: 90%;">
+                
+                <div class="mb-4 p-4" style="background: white; border-radius: 1.5rem">
+                    <h5 class="text-uppercase" style="font-weight: normal;">What can I do with my</h5>
+                    <img class="" src="./assets/Jungle&Junglee.svg" style="height: 3rem; max-width: 90%;">
+                </div>
     
                 <div class="cndce-card-container row mt-3 mt-lg-5">
                     <!-- Card -->
@@ -473,7 +486,7 @@
                 </div>
 
                 <div class="pb-4" style="">
-                    <button class="cndce-mint-get-started"  data-bs-toggle="modal" data-bs-target="#modalAdopt">0.05E</button>
+                    <button class="cndce-mint-get-started"  data-bs-toggle="modal" data-bs-target="#modalAdopt">0.05ETH</button>
                 </div>
             </div>
 
@@ -629,16 +642,17 @@
 
             </div>
 
-            <div class="cndce-team-container row my-5">
-                <div class="col-3 mb-3 px-lg-4 px-1">
-                    <div class="cndce-team-card py-5 px-xxl-5">
-                        <div class="cndce-team-img">
+            <div class="cndce-team-container row my-5 align-items-stretch">
+                <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
+                    <div class="cndce-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
+                        <div class="cndce-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
                             <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/team.png">
+                            <img src="./assets/nolol.png">
                         </div>
-                        <div class="pt-4">
+                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">Nolol</h4>
-                            <p class="mb-0">I Design</p>
+                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Coding Ninja</p>
+                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Web Dev)</p>
                         </div>
 
                         <div class="cndce-team-socials d-none">
@@ -654,15 +668,16 @@
                     </div>
                 </div>
 
-                <div class="col-3 mb-3 px-lg-4 px-1">
-                    <div class="cndce-team-card py-5 px-xxl-5">
-                        <div class="cndce-team-img">
+                <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
+                    <div class="cndce-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
+                        <div class="cndce-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
                             <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/team.png">
+                            <img src="./assets/klecko.png">
                         </div>
-                        <div class="pt-4">
+                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">kleck0</h4>
-                            <p class="mb-0">I Solve</p>
+                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Master of Coin</p>
+                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Token Master)</p>
                         </div>
 
                         <div class="cndce-team-socials d-none">
@@ -678,15 +693,16 @@
                     </div>
                 </div>
 
-                <div class="col-3 mb-3 px-lg-4 px-1">
-                    <div class="cndce-team-card py-5 px-xxl-5">
-                        <div class="cndce-team-img">
+                <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
+                    <div class="cndce-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
+                        <div class="cndce-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
                             <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/team.png">
+                            <img src="./assets/k3vin.png">
                         </div>
-                        <div class="pt-4">
+                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">K3vin</h4>
-                            <p class="mb-0">I Create</p>
+                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Collector of Business Cards</p>
+                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Biz Dev)</p>
                         </div>
 
                         <div class="cndce-team-socials d-none">
@@ -702,15 +718,16 @@
                     </div>
                 </div>
 
-                <div class="col-3 mb-3 px-lg-4 px-1">
-                    <div class="cndce-team-card py-5 px-xxl-5">
-                        <div class="cndce-team-img">
+                <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
+                    <div class="cndce-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
+                        <div class="cndce-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
                             <img class="cndce-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/team.png">
+                            <img src="./assets/0xvibe.png">
                         </div>
-                        <div class="pt-4">
+                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">0xVibe</h4>
-                            <p class="mb-0">I Create</p>
+                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Dream Alchemist</p>
+                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Game Developer)</p>
                         </div>
 
                         <div class="cndce-team-socials d-none">
@@ -879,7 +896,7 @@
     </script>
 
     <!-- Self -->
-    <script src='./script.js?v0.3.4'></script>
+    <script src='./script.js?v0.4'></script>
 
 
 </body>
