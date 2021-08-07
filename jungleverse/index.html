@@ -20,7 +20,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Self -->
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css?v0.3.3.2'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css?v0.3.4'>
 
 </head>
 
@@ -59,9 +59,11 @@
                         <div>0.004</div>
                     </div>
 
-                    <div class="cndce-adopt-modal-quantity py-4 mt-3">
+                    <div id="cndce-adopt-modal-quantity" class="cndce-adopt-modal-quantity py-4 mt-3" data-max="20" data-min="1">
                         <div>
-                            <button class="cndce-adopt-modal-quantity-btn">
+                            <button 
+                            id="cndce-adopt-modal-quantity-btn-minus"
+                            class="cndce-adopt-modal-quantity-btn">
                                 -
                             </button>
                         </div>
@@ -70,12 +72,14 @@
                                 Quantity
                             </div>
                             <div class="text-center">
-                                <h5>1</h5>
+                                <h5 id="cndce-adopt-modal-quantity-value">1</h5>
                             </div>
                         </div>
 
                         <div>
-                            <button class="cndce-adopt-modal-quantity-btn">
+                            <button 
+                            id="cndce-adopt-modal-quantity-btn-plus"
+                            class="cndce-adopt-modal-quantity-btn">
                                 +
                             </button>
                         </div>
@@ -875,7 +879,7 @@
     </script>
 
     <!-- Self -->
-    <script src='./script.js?v0.3.3'></script>
+    <script src='./script.js?v0.3.4'></script>
 
 
 </body>

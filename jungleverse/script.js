@@ -9,6 +9,11 @@
     const domMobileMenu = document.getElementById('cndce-mobile-menu');
     const domMobileMenuClose = document.getElementById('cndce-menu-close');
 
+    const domAdoptQuantity = document.getElementById("cndce-adopt-modal-quantity");
+    const domAdoptQuantityMinus = document.getElementById('cndce-adopt-modal-quantity-btn-minus');
+    const domAdoptQuantityPlus = document.getElementById('cndce-adopt-modal-quantity-btn-plus');
+    const domAdoptQuantityValue = document.getElementById('cndce-adopt-modal-quantity-value');
+
 
     function initHeaderSticky(){
         if(window.scrollY > 0){
@@ -43,6 +48,16 @@
         
     }
 
+
+    function updateAdoptQuantityValue(delta){
+        const value = parseInt(domAdoptQuantityValue.innerText);
+
+        if(value + delta >= domAdoptQuantity.dataset.min && value + delta <= domAdoptQuantity.dataset.max){
+            domAdoptQuantityValue.innerText = value + delta;
+        }
+
+    }
+
     window.addEventListener('scroll', function(){
         showTimelineBg();
 
@@ -56,6 +71,14 @@
 
     domMobileMenuClose.addEventListener('click', function(){
         document.body.classList.remove('show-menu');
+    })
+
+    domAdoptQuantityMinus.addEventListener('click', function(){
+        updateAdoptQuantityValue(-1);
+    })
+
+    domAdoptQuantityPlus.addEventListener('click', function(){
+        updateAdoptQuantityValue(1);
     })
 
 

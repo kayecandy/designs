@@ -51,13 +51,13 @@ button.btn-yellow{
 }
 
 .cndce-bg-animated{
-    background-image: url("assets/bg-tile.png");
-    -webkit-animation: background-animation 30s linear infinite;
-    animation: background-animation 30s linear infinite;
+    background-image: url("assets/bg-tile.png?v3.4");
+    -webkit-animation: background-animation 90s linear infinite;
+    animation: background-animation 90s linear infinite;
     background-size: 100% auto;
 }
 
-@keyframes background-animation{to{background-position:0 0}0%{background-position:1780px -690px}}
+@keyframes background-animation{to{background-position:0 0}0%{background-position:3000px -1504px}}
 
 
 /* Header */
