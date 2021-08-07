@@ -85,6 +85,10 @@ button.btn-yellow{
     box-shadow: none;
 }
 
+.modal-open .cndce-header-wrapper{
+    margin-right: 15px;
+}
+
 .cndce-header-spacer{
     height:106px;
 }
@@ -118,6 +122,8 @@ button.cndce-disconnected-btn{
     background-color: gray;
     display: flex;
     align-items: center;
+
+    transition: all 0.5s ease-in-out;
 }
 
 .cndce-disconnected-btn::before{
@@ -142,6 +148,8 @@ button.cndce-disconnected-btn.mobile{
     font-size: 0.9rem;
     letter-spacing: 0.03em;
     padding-top: 2px;
+
+    padding-bottom: 0;
     /* padding: 0 1.5rem; */
 
     background-color: whitesmoke;
@@ -153,7 +161,8 @@ button.cndce-disconnected-btn.mobile{
     transition: all 0.5s ease-in-out;
 }
 
-.cndce-header-wrapper.top .cndce-header-item{
+.cndce-header-wrapper.top .cndce-header-item,
+.cndce-header-wrapper.top .cndce-disconnected-btn{
     transform: translate3d(0, 2rem, 0);
 
     box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
