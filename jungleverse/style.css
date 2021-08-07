@@ -387,6 +387,7 @@ button.cndce-adopt-modal-quantity-btn{
     padding-right: 1rem;
     border-radius: 0.5rem;
     height: 60px;
+    max-width: 100%;
 }
 
 .section-2 .cndce-about-text{
