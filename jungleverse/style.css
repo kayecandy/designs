@@ -335,8 +335,14 @@ button.cndce-adopt-modal-quantity-btn{
     position: relative;
 }
 
+
 .cndce-section-border-bottom{
     border-bottom: 9px solid #efefef;
+}
+
+.cndce-section-border-top{
+    border-top: 9px solid #efefef;
+
 }
 
 
