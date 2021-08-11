@@ -22,9 +22,40 @@
     <!-- Self -->
     <link rel='stylesheet' type='text/css' media='screen' href='style.css?v0.4.3'>
 
+
+    <style>
+        .cndce-loading{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body.loaded .cndce-loading{
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
+
+    <div id="cndce-loading" class="cndce-loading">
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <circle cx="50" cy="50" fill="none" stroke="#000000" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+            <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+            </circle>
+        </svg>
+    
+    </div>
+    
 
     <div id="cndce-header-wrapper" class="cndce-header-wrapper">
         <div class="cndce-header d-flex">
@@ -897,6 +928,15 @@
 
     <!-- Self -->
     <script src='./script.js?v0.4.3'></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            setTimeout(()=>{
+                document.body.classList.add('loaded');
+            }, 500)
+        })
+    </script>
 
 
 </body>
