@@ -1,6 +1,7 @@
 <?php 
 
     include 'config.php';
+    include 'contents/loading.php';
     include 'contents/menu.php';
     include 'contents/header-bg.php';
     include 'contents/section-welcome.php';
@@ -32,6 +33,7 @@
     <?php include 'style.css.php' ?>
 
     <!-- Self - Components -->
+    <?php include 'components/loading/loading.css.php' ?>
     <?php include 'components/menu/menu.css.php' ?>
     <?php include 'components/header-bg/header-bg.css.php' ?>
     <?php include 'components/section-welcome/section-welcome.css.php' ?>
@@ -43,6 +45,7 @@
 </head>
 <body>
 
+    <?php include 'components/loading/loading.php' ?>
     <?php include 'components/menu/menu.php' ?>
     <?php include 'components/header-bg/header-bg.php' ?>
     <?php include 'components/section-welcome/section-welcome.php' ?>
@@ -58,6 +61,7 @@
     </script>
 
     <!-- Scripts -->
+    <?php include 'components/loading/loading.js.php' ?>
     <?php include 'components/menu/menu.js.php' ?>
     <?php include 'components/roadmap/roadmap.js.php' ?>
 </body>
