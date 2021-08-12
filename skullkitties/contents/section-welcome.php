@@ -1,14 +1,26 @@
 <?php 
 
     const SECTION_WELCOME_CONTENTS = [
-        'id'            => 'welcome',
-        'titleImg'      => './assets/skullkitties.svg',
-        'characterImg'  => './assets/characters.png',
+        'id'                => 'welcome',
+        'isTitleImg'        => false,
+        'titleImg'          => './assets/skullkitties.svg',
         
-        'welcomeText'   => 'Jungleverse is a multiplayer, play-to-earn game launching on the Ethereum blockchain. You can
-        battle, breed, and earn $JUNGLE with your Jungleverse characters, also known as Junglees. There
-        are 30 gen-1 species of Junglees that currently live in the Jungleverse. Each Junglee is a
-        programmatically generated NFT and only a total of 10,000 of them will ever be up for adoption.'
+        'titleText'         => 'Skull Kitties',
+        'titleTextTag'      => 'h1',
+        'titleTextStyle'    => 'font-weight: 800; font-size: 4rem',
+        'titleTextColor'    => COLORS[1],
+
+        'characterImg'      => './assets/characters.png',
+        
+        'welcomeText'       => 'A collection of 6666 unique kitties raised from hell. They are programmatically generated from over 300K total possible options and are currently living their 9th life on the Etherium Blockchain.<br><br><br>Launching on Friday the 13th (8/13)',
+
+        'carouselContents'  => [
+            './assets/characters.png',
+            './assets/characters.png',
+            './assets/characters.png',
+            './assets/characters.png',
+            './assets/characters.png'
+        ]
     ];
 
 ?>

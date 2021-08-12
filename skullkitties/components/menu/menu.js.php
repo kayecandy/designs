@@ -22,11 +22,14 @@
             document.body.classList.remove('show-menu');
         })
 
-        window.addEventListener('scroll', function(){
-            initHeaderSticky();
-        })
+        <?php if(MENU_CONTENTS['sticky']): ?>
+            window.addEventListener('scroll', function(){
+                initHeaderSticky();
+            })
 
-        initHeaderSticky();
+            initHeaderSticky();
+
+        <?php endif; ?>
 
     })();
 </script>

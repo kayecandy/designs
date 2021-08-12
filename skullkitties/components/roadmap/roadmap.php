@@ -1,4 +1,4 @@
-<div id="<?= ROADMAP_CONTENTS['id'] ?>" class="section-container section-<?= ROADMAP_CONTENTS['id'] ?>  <?= PREFIX ?>-section-border-bottom">
+<div id="<?= ROADMAP_CONTENTS['id'] ?>" class="section-container section-<?= ROADMAP_CONTENTS['id'] ?>">
 
     <!-- Title -->
     <div class="<?= PREFIX ?>-bg-white py-5" style="margin-bottom: -1px;">
@@ -24,7 +24,7 @@
                 <div class="<?= PREFIX ?>-timeline-item">
                     <div class="<?= PREFIX ?>-bg-white  px-md-3 px-xl-5 <?= $roadmapItem['position'] == 'left' ? 'text-md-end pe-md-4 ps-md-0' : '' ?> ps-4">
                         <div class="<?= PREFIX ?>-timeline-card m<?= $roadmapItem['position'] == 'right' ? 'e' : 's' ?>-lg-5 p-4 p-xl-5 <?= $roadmapItem['position'] == 'left' ? 'text-md-start' : '' ?>">
-                            <h5><?= $roadmapItem['title'] ?></h5>
+                            <h5 class="<?= ROADMAP_CONTENTS['titleClass'] ?>"><?= $roadmapItem['title'] ?></h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                 <?php foreach ($roadmapItem['content'] as $roadmapItemBullet): ?>
                                     <li><?= $roadmapItemBullet ?></li>

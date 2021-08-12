@@ -1,26 +1,29 @@
 <style>
 <?= '.' . PREFIX ?>-header-wrapper{
-    position: fixed;
+    position: <?= MENU_CONTENTS['sticky'] ? 'fixed' : 'relative' ?>;
     width: 100%;
     z-index: 1000;
 
-    background: #f5f5f5;
+    background: <?= MENU_CONTENTS['background'] ?>;
     padding: 0.5rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
 
     box-shadow: 0px 0px 1px rgb(12 26 75 / 24%), 0px 3px 15px -1px rgb(50 50 71 / 5%);
 
-    color: black;
+    color: <?= MENU_CONTENTS['color'] ?>;
 
 }
 
-<?= '.' . PREFIX ?>-header-wrapper.top{
-    padding: 1rem;
-    padding-bottom: 0;
-    background: transparent;
-    box-shadow: none;
-}
+<?php if(MENU_CONTENTS['sticky']): ?>
+    <?= '.' . PREFIX ?>-header-wrapper.top{
+        padding: 1rem;
+        padding-bottom: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+<?php endif ?>
 
 .modal-open <?= '.' . PREFIX ?>-header-wrapper{
     margin-right: 15px;
@@ -46,9 +49,13 @@
     transform-origin: top left;
 }
 
-<?= '.' . PREFIX ?>-header-wrapper.top <?= '.' . PREFIX ?>-header-logo{
-    transform: scale(2.6); 
-}
+
+<?php if(MENU_CONTENTS['sticky']): ?>
+    <?= '.' . PREFIX ?>-header-wrapper.top <?= '.' . PREFIX ?>-header-logo{
+        transform: scale(2.6); 
+    }
+
+<?php endif; ?>
 
 <?= '.' . PREFIX ?>-header-items{
     /* margin-left: auto; */
@@ -56,7 +63,8 @@
 
 button<?= '.' . PREFIX ?>-disconnected-btn{
     border-radius: 10rem;
-    background-color: gray;
+    background-color: <?= MENU_CONTENTS['disconnectedBg'] ?>;
+    color: <?= MENU_CONTENTS['disconnectedColor'] ?>;
     display: flex;
     align-items: center;
 
@@ -69,7 +77,7 @@ button<?= '.' . PREFIX ?>-disconnected-btn{
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background-color: #b3b3b3;
+    background-color: <?= MENU_CONTENTS['disconnectedIconColor'] ?>;
     margin-right: 0.5rem;
 }
 
@@ -89,7 +97,7 @@ button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
     padding-bottom: 0;
     /* padding: 0 1.5rem; */
 
-    background-color: whitesmoke;
+    background-color: <?= MENU_CONTENTS['menuItemBg'] ?>;
     border-radius: 1rem;
     margin: 0 0.5rem;
     font-weight: 800;
@@ -111,14 +119,11 @@ button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
 }
 
 <?= '.' . PREFIX ?>-header-item:hover{
-    background-color: #52C240;
+    background-color: <?= MENU_CONTENTS['menuItemHoverBg'] ?>;
+    color: <?= MENU_CONTENTS['menuItemHoverColor'] ?>
 
 }
 
-<?= '.' . PREFIX ?>-header-item:hover a{
-    color: white;
-
-}
 
 
 <?= '.' . PREFIX ?>-header-burger{
@@ -139,14 +144,18 @@ button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
     visibility: hidden;
 }
 
-@media only screen and (min-width: 1001px) {
-    <?= '.' . PREFIX ?>-header-wrapper.top <?= '.' . PREFIX ?>-header-item,
-    <?= '.' . PREFIX ?>-header-wrapper.top <?= '.' . PREFIX ?>-disconnected-btn{
-        transform: translate3d(0, 2rem, 0);
+<?php if(MENU_CONTENTS['sticky']): ?>
 
-        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    @media only screen and (min-width: 1001px) {
+        <?= '.' . PREFIX ?>-header-wrapper.top <?= '.' . PREFIX ?>-header-item,
+        <?= '.' . PREFIX ?>-header-wrapper.top <?= '.' . PREFIX ?>-disconnected-btn{
+            transform: translate3d(0, 2rem, 0);
+
+            box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+        }
     }
-}
+
+<?php endif; ?>
 
 @media only screen and (max-width: 1000px) {
 

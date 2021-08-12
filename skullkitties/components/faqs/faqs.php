@@ -1,7 +1,14 @@
-<div style="background: white">
+<div class="<?= PREFIX ?>-bg-white">
     <div id="<?= FAQS_CONTENT['id'] ?>" class="container section-container section-<?= FAQS_CONTENT['id'] ?>" style="padding-bottom: 6rem;">
         <h5 style="font-weight: normal;">Still have doubts? Check our </h5>
-        <img class="mb-4" src="<?= FAQS_CONTENT['titleImg'] ?>">
+
+        <?php if(FAQS_CONTENT['isTitleImg']): ?>
+            <img class="mb-4" src="<?= FAQS_CONTENT['titleImg'] ?>">
+        <?php else: ?>
+            <<?= FAQS_CONTENT['titleTextTag'] ?> class="<?= PREFIX ?>-<?= FAQS_CONTENT['id'] ?>-title-text mb-4">
+                <?= FAQS_CONTENT['titleText'] ?>
+            </<?= FAQS_CONTENT['titleTextTag'] ?>>
+        <?php endif; ?>
 
 
         <div class="accordion accordion-flush my-4" id="accordionFlushExample">

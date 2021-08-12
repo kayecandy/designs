@@ -1,21 +1,21 @@
 <style>
 
     .section-<?= BUY_STRIP_CONTENTS['id'] ?>{
-        background: #fae660
+        background: <?= BUY_STRIP_CONTENTS['bgOuter'] ?>
     }
 
     .section-<?= BUY_STRIP_CONTENTS['id'] ?> .row-<?= BUY_STRIP_CONTENTS['id'] ?>{
-        background: #c0c500;
-        color: black;
+        background: <?= BUY_STRIP_CONTENTS['bgInner'] ?>;
+        color: <?= BUY_STRIP_CONTENTS['textColor'] ?>;
     }
     .section-<?= BUY_STRIP_CONTENTS['id'] ?> .<?= PREFIX ?>-<?= BUY_STRIP_CONTENTS['id'] ?>-text-left{
-        font-weight: 800;
+        font-weight: 900;
         font-style: italic;
     }
 
 
     .section-<?= BUY_STRIP_CONTENTS['id'] ?> .<?= PREFIX ?>-<?= BUY_STRIP_CONTENTS['id'] ?>-text-button{
-        background: black;
-        color: #c0c500;
+        background: <?= BUY_STRIP_CONTENTS['buttonBg'] ?>;
+        color: <?= BUY_STRIP_CONTENTS['buttonColor'] ?>;
     }
 </style>

@@ -10,7 +10,18 @@
 
                 <div class="mb-3">
                     <div class="welcome-text text-uppercase" style="font-size: 1.5rem;">Welcome to the</div>
-                    <div><img class="<?= PREFIX ?>-text-title" src="<?= SECTION_WELCOME_CONTENTS['titleImg'] ?>"></div>
+                    <div>
+                        <?php if(SECTION_WELCOME_CONTENTS['isTitleImg']): ?>
+                            <img class="<?= PREFIX ?>-title-img" src="<?= SECTION_WELCOME_CONTENTS['titleImg'] ?>">
+                        <?php else: ?>
+                            <<?= SECTION_WELCOME_CONTENTS['titleTextTag'] ?> 
+                                class="<?= PREFIX ?>-<?= SECTION_WELCOME_CONTENTS['id'] ?>-title-text" 
+                                style="<?= SECTION_WELCOME_CONTENTS['titleTextStyle'] ?>"
+                            >
+                                <?= SECTION_WELCOME_CONTENTS['titleText'] ?>
+                            </<?= SECTION_WELCOME_CONTENTS['titleTextTag'] ?>>
+                        <?php endif; ?>
+                    </div>
                 </div>
 
                 <img class="<?= PREFIX ?>-about-image d-block d-lg-none" src="<?= SECTION_WELCOME_CONTENTS['characterImg'] ?>"

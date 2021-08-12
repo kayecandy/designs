@@ -1,12 +1,16 @@
 <style>
 
 
-.section-<?= SECTION_WELCOME_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-text-title{
+.section-<?= SECTION_WELCOME_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-title-img{
     /* background-color: white;  */
     padding-right: 1rem;
     border-radius: 0.5rem;
     height: 60px;
     max-width: 100%;
+}
+
+.<?= PREFIX ?>-<?= SECTION_WELCOME_CONTENTS['id'] ?>-title-text{
+    color: <?= SECTION_WELCOME_CONTENTS['titleTextColor'] ?>
 }
 
 .section-<?= SECTION_WELCOME_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-about-text{
@@ -23,7 +27,7 @@
 
 
 @media only screen and (max-width: 1400px) {
-    .section-<?= SECTION_WELCOME_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-text-title{
+    .section-<?= SECTION_WELCOME_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-title-img{
         padding-right: 0;
     }
 }

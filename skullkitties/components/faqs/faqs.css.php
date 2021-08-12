@@ -1,9 +1,16 @@
 <style>
+
+    .<?= PREFIX ?>-<?= FAQS_CONTENT['id'] ?>-title-text{
+        color: <?= FAQS_CONTENT['titleColor'] ?>;
+        font-weight: 900;
+    }
+
     .section-<?= FAQS_CONTENT['id'] ?> .accordion .accordion-item{
         border: 0.5px solid rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         margin: 0.8rem 0;
 
+        background: <?= FAQS_CONTENT['faqHeaderColor'] ?>;
         color: black;
     }
 
@@ -14,6 +21,8 @@
         border: none;
         outline: none;
         box-shadow: none;
+
+        transition-property: all;
     }
 
     .section-<?= FAQS_CONTENT['id'] ?> .accordion .accordion-button::after{
@@ -26,7 +35,9 @@
     }
 
     .section-<?= FAQS_CONTENT['id'] ?> .accordion .accordion-button:not(.collapsed){
-        color: #52C240;
+        /* color: #52C240; */
+        color: <?= FAQS_CONTENT['faqHeaderActiveColor'] ?>;
+        font-weight: 800;
     }
 
     .section-<?= FAQS_CONTENT['id'] ?> .accordion-body a{

@@ -13,6 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <!-- Self - Base -->
     <style>
 html, body{
@@ -117,27 +120,21 @@ button.btn-yellow{
     }
 </style>    <style>
 .sk-header-wrapper{
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 1000;
 
-    background: #f5f5f5;
+    background: black;
     padding: 0.5rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
 
     box-shadow: 0px 0px 1px rgb(12 26 75 / 24%), 0px 3px 15px -1px rgb(50 50 71 / 5%);
 
-    color: black;
+    color: white;
 
 }
 
-.sk-header-wrapper.top{
-    padding: 1rem;
-    padding-bottom: 0;
-    background: transparent;
-    box-shadow: none;
-}
 
 .modal-open .sk-header-wrapper{
     margin-right: 15px;
@@ -163,9 +160,7 @@ button.btn-yellow{
     transform-origin: top left;
 }
 
-.sk-header-wrapper.top .sk-header-logo{
-    transform: scale(2.6); 
-}
+
 
 .sk-header-items{
     /* margin-left: auto; */
@@ -173,7 +168,8 @@ button.btn-yellow{
 
 button.sk-disconnected-btn{
     border-radius: 10rem;
-    background-color: gray;
+    background-color: transparent;
+    color: #585858;
     display: flex;
     align-items: center;
 
@@ -186,7 +182,7 @@ button.sk-disconnected-btn{
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background-color: #b3b3b3;
+    background-color: #585858;
     margin-right: 0.5rem;
 }
 
@@ -206,7 +202,7 @@ button.sk-disconnected-btn.mobile{
     padding-bottom: 0;
     /* padding: 0 1.5rem; */
 
-    background-color: whitesmoke;
+    background-color: transparent;
     border-radius: 1rem;
     margin: 0 0.5rem;
     font-weight: 800;
@@ -228,14 +224,10 @@ button.sk-disconnected-btn.mobile{
 }
 
 .sk-header-item:hover{
-    background-color: #52C240;
-
+    background-color: transparent;
+    color: #D5A021
 }
 
-.sk-header-item:hover a{
-    color: white;
-
-}
 
 
 .sk-header-burger{
@@ -256,14 +248,6 @@ button.sk-disconnected-btn.mobile{
     visibility: hidden;
 }
 
-@media only screen and (min-width: 1001px) {
-    .sk-header-wrapper.top .sk-header-item,
-    .sk-header-wrapper.top .sk-disconnected-btn{
-        transform: translate3d(0, 2rem, 0);
-
-        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
-    }
-}
 
 @media only screen and (max-width: 1000px) {
 
@@ -351,68 +335,39 @@ button.sk-disconnected-btn.mobile{
 }
 
 </style>    <style>
+    .sk-welcome-title-text{
+        color: #D5A021    }
 
-
-.section-welcome .sk-text-title{
-    /* background-color: white;  */
-    padding-right: 1rem;
-    border-radius: 0.5rem;
-    height: 60px;
-    max-width: 100%;
-}
-
-.section-welcome .sk-about-text{
-    font-size: 1rem;
-    line-height: 190%;
-}
-
-.section-welcome .sk-about-image{
-    width:75%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 6rem;
-}
-
-
-@media only screen and (max-width: 1400px) {
-    .section-welcome .sk-text-title{
-        padding-right: 0;
+    .swiper-container .sk-welcome-swiper-img{
+        width: 100%;
+        min-width: 400px;
+        max-width: 600px;
+        border-radius: 1rem;
     }
-}
-
-@media only screen and (max-width: 992px){
-    .section-welcome .sk-about-image{
-        position: relative;
-        top: 0;
-    }
-
-}
-
 </style>    <style>
 
     .section-buy-strip{
-        background: #fae660
-    }
+        background: #fad220    }
 
     .section-buy-strip .row-buy-strip{
-        background: #c0c500;
+        background: #D5A021;
         color: black;
     }
     .section-buy-strip .sk-buy-strip-text-left{
-        font-weight: 800;
+        font-weight: 900;
         font-style: italic;
     }
 
 
     .section-buy-strip .sk-buy-strip-text-button{
         background: black;
-        color: #c0c500;
+        color: #D5A021;
     }
 </style>    <style>
 
 body.roadmap::before{
     content: "";
-    background-image: url("data:image/png;base64,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ZW50cy8xLjEvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4yIChNYWNpbnRvc2gpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMS0wOC0wNFQxOToyOTo1MSswODowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0wOC0wNVQyMjo1MzozNyswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjEtMDgtMDVUMjI6NTM6MzcrMDg6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFiMjEwZWY1LTJlOTMtNGM5Mi05YjM4LWEzN2QzNzA2ZTQ0MiIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjBhYjE2NTA1LTFjM2UtYjk0MS1hNjZkLTRhOTVmNzI1MzZlYiIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmNmZTczYzIxLWIyODgtNDdmZS05MjQyLTAyYjUxYmVmYzNjMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9IkRpc3BsYXkiIHRpZmY6T3JpZW50YXRpb249IjEiIHRpZmY6WFJlc29sdXRpb249IjcyMDAwMC8xMDAwMCIgdGlmZjpZUmVzb2x1dGlvbj0iNzIwMDAwLzEwMDAwIiB0aWZmOlJlc29sdXRpb25Vbml0PSIyIiBleGlmOkNvbG9yU3BhY2U9IjY1NTM1IiBleGlmOlBpeGVsWERpbWVuc2lvbj0iMjE2IiBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTA4MCI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2ZlNzNjMjEtYjI4OC00N2ZlLTkyNDItMDJiNTFiZWZjM2MwIiBzdEV2dDp3aGVuPSIyMDIxLTA4LTA0VDE5OjI5OjUxKzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2E1ZGVmN2ItZGFkNy00MGY5LTgyZjYtMmE2NzZmMjA2ZTNjIiBzdEV2dDp3aGVuPSIyMDIxLTA4LTA0VDIwOjQ4OjI2KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ODkxM2I5YjgtNWQzNS00MDY5LWEzYjQtMjYxZjkxYjVkZmU5IiBzdEV2dDp3aGVuPSIyMDIxLTA4LTA0VDIwOjQ4OjI2KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MWIyMTBlZjUtMmU5My00YzkyLTliMzgtYTM3ZDM3MDZlNDQyIiBzdEV2dDp3aGVuPSIyMDIxLTA4LTA1VDIyOjUzOjM3KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Y2E1ZGVmN2ItZGFkNy00MGY5LTgyZjYtMmE2NzZmMjA2ZTNjIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NTA4MjFlYzQtZjQ1Zi1jYzQ4LTlkNWItNTE5ZjlhMzdhOGQ3IiBzdFJlZjpvcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6Y2ZlNzNjMjEtYjI4OC00N2ZlLTkyNDItMDJiNTFiZWZjM2MwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+inh0aAAACH5JREFUeNrt1sENABAUREG0pyM3Jbo5qEELXxHiZKaETV6yuc4eCXiimAAEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMBOAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBGYCEBgIDBAYCAwEBggMBAYCAwQGAgOBARfy2KuZAR4FFhFWABcRBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDATgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDARmAhAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDH52AIhbESPb0P1RAAAAAElFTkSuQmCC");
+    background-image: url('data:image/png;base64,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ZW50cy8xLjEvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4yIChNYWNpbnRvc2gpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMS0wOC0wNFQxOToyOTo1MSswODowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0wOC0xMlQxNTozMDo1NyswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjEtMDgtMTJUMTU6MzA6NTcrMDg6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNkNjIwNTkwLTFmZjItNDIwOC1iYjEyLWQ0N2FmNzFlNTFlOSIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjVhZTM0Nzg2LTdlNDYtMGY0Mi1iYmZlLWMxYjg2MGQzMzU2MyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmNmZTczYzIxLWIyODgtNDdmZS05MjQyLTAyYjUxYmVmYzNjMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9IkRpc3BsYXkiIHRpZmY6T3JpZW50YXRpb249IjEiIHRpZmY6WFJlc29sdXRpb249IjcyMDAwMC8xMDAwMCIgdGlmZjpZUmVzb2x1dGlvbj0iNzIwMDAwLzEwMDAwIiB0aWZmOlJlc29sdXRpb25Vbml0PSIyIiBleGlmOkNvbG9yU3BhY2U9IjY1NTM1IiBleGlmOlBpeGVsWERpbWVuc2lvbj0iMjE2IiBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTA4MCI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2ZlNzNjMjEtYjI4OC00N2ZlLTkyNDItMDJiNTFiZWZjM2MwIiBzdEV2dDp3aGVuPSIyMDIxLTA4LTA0VDE5OjI5OjUxKzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2E1ZGVmN2ItZGFkNy00MGY5LTgyZjYtMmE2NzZmMjA2ZTNjIiBzdEV2dDp3aGVuPSIyMDIxLTA4LTA0VDIwOjQ4OjI2KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ODkxM2I5YjgtNWQzNS00MDY5LWEzYjQtMjYxZjkxYjVkZmU5IiBzdEV2dDp3aGVuPSIyMDIxLTA4LTA0VDIwOjQ4OjI2KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2Q2MjA1OTAtMWZmMi00MjA4LWJiMTItZDQ3YWY3MWU1MWU5IiBzdEV2dDp3aGVuPSIyMDIxLTA4LTEyVDE1OjMwOjU3KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Y2E1ZGVmN2ItZGFkNy00MGY5LTgyZjYtMmE2NzZmMjA2ZTNjIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NTA4MjFlYzQtZjQ1Zi1jYzQ4LTlkNWItNTE5ZjlhMzdhOGQ3IiBzdFJlZjpvcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6Y2ZlNzNjMjEtYjI4OC00N2ZlLTkyNDItMDJiNTFiZWZjM2MwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mFjSGgAACH5JREFUeNrt1kENwCAABEEgNdEnOjCLElxUz1UE4cWMhEs2ufrNngIc0UwAAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEJgJQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIzAQgMBAYIDAQGAgMEBgIDgQECA4GBwIANT96xzABn1CRWABcRBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDATgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCAwEBggMBAYCAwQGAgOBAQIDgYHAAIGBwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGAgMEBgIDAQGCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwQGAgMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBAQIDgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDARmAhAYCAwQGAgMBAYIDAQGAgMEBgIDgQECA4GBwACBgcBAYIDAQGCAwEBgIDBAYCAwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDBAYCA4EBAgOBgcAAgYHAQGCAwEBgIDBAYCAwEBggMBAYIDAQGAgMEBgIDAQGCAwEBgIDBAYCA4EBAgOBgcAAgYHAAIGBwEBggMBAYCAwQGAgMBAYIDAQGAgMEBgIDG72A3SeEBRigEU7AAAAAElFTkSuQmCC');
     background-size: auto 100%;
     background-repeat: repeat-x;
     /* background-attachment: fixed; */
@@ -506,8 +461,7 @@ body.roadmap::before{
 .sk-roadmap .sk-timeline-item::after{
     /* content: ""; */
     display: block;
-    background-color: #4bd881;
-    color: #f3cf04;
+    background-color: #D5A021;
 
     flex-grow: 0;
     flex-shrink: 0;
@@ -519,7 +473,7 @@ body.roadmap::before{
     padding-top: 0px;
     border-style: solid;
     border-width: 5px;
-    border-color: #fff;
+    border-color: white;
     border-radius: 50%;
     position: relative;
 
@@ -528,12 +482,15 @@ body.roadmap::before{
 
 
 .section-roadmap .sk-timeline-item:hover::before,
-.section-roadmap .sk-timeline-item.active::before{
-    background-color: #4bd881;
+.section-roadmap .sk-timeline-item.active::before,
+.section-roadmap .sk-timeline-item:hover::after,
+.section-roadmap .sk-timeline-item.active::after
+{
+    background-color: #D5A021;
     border-width: 5px;
     transform: scale(1.1);
-    box-shadow: 0 2px 9px 0 rgb(105 223 124 / 85%);
-    
+    /* box-shadow: 0 2px 9px 0 rgb(105 223 124 / 85%); */
+    border-color: #D5A021;
 
 }
 
@@ -592,80 +549,22 @@ body.roadmap::before{
     }
 }
 </style>    <style>
-
-
-.section-team .sk-team-card{
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
-    height: 100%;
-    background: white;
-    color: black;
-}
-
-
-
-.section-team .sk-team-img{
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-    position: relative;
-    margin: 0 auto;
-
-}
-
-.section-team .sk-team-img img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-
-.section-team .sk-team-img .sk-team-img-border{
-    position: absolute;
-    width: calc(100% + 0.5rem);
-    height: calc(100% + 0.5rem);
-    top: -0.25rem;
-    left: -0.15rem;
-
-    transition: all 0.5s cubic-bezier(0.42, 0, 0, 1.76);
-}
-
-.section-team .sk-team-card:hover .sk-team-img-border{
-    transform: rotate(70deg);
-}
-
-
-.section-team .sk-team-socials{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.section-team .sk-team-social img{
-    margin: 0 0.5rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .section-team .sk-team-card{
-        border-radius: 25px;;
-    
+    .sk-team-member-img{
+        border-radius: 1rem;
     }
-}
-
-@media only screen and (max-width: 567px) {
-    .section-team .sk-team-img{
-        width: 4rem;
-        height: 4rem;
-    
-    }
-}
 </style>    <style>
+
+    .sk-faq-title-text{
+        color: #D5A021;
+        font-weight: 900;
+    }
+
     .section-faq .accordion .accordion-item{
         border: 0.5px solid rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         margin: 0.8rem 0;
 
+        background: #D5A021;
         color: black;
     }
 
@@ -676,6 +575,8 @@ body.roadmap::before{
         border: none;
         outline: none;
         box-shadow: none;
+
+        transition-property: all;
     }
 
     .section-faq .accordion .accordion-button::after{
@@ -688,7 +589,9 @@ body.roadmap::before{
     }
 
     .section-faq .accordion .accordion-button:not(.collapsed){
-        color: #52C240;
+        /* color: #52C240; */
+        color: black;
+        font-weight: 800;
     }
 
     .section-faq .accordion-body a{
@@ -763,53 +666,90 @@ body.roadmap::before{
 </div>    
 <div id="header" class="section-container section-header pb-4 pb-lg-5">
 
-</div>    
-<div class="sk-bg-white">
-    <div id="welcome" class="container section-container section-welcome text-center pb-5">
+</div>    <div class="sk-bg-white pb-5">
+    <div id="welcome"
+        class="container section-container section-welcome text-center pb-5">
 
+        <div>
+            <div class="welcome-text text-uppercase" style="font-size: 1.5rem;">Welcome to the</div>
 
-        <div class="row" style="text-align: left;">
-            <div class="col-12 col-lg-8 col-xl-6">
+                        <h1                class="sk-welcome-title-text"
+                style="font-weight: 800; font-size: 4rem">
+                Skull Kitties            </h1>
+                    </div>
 
+        <div class="sk-about-text my-5">
+            A collection of 6666 unique kitties raised from hell. They are programmatically generated from over 300K total possible options and are currently living their 9th life on the Etherium Blockchain.<br><br><br>Launching on Friday the 13th (8/13)        </div>
 
-                <div class="mb-3">
-                    <div class="welcome-text text-uppercase" style="font-size: 1.5rem;">Welcome to the</div>
-                    <div><img class="sk-text-title" src="./assets/skullkitties.svg"></div>
+    </div>
+
+    <!-- Slider main container -->
+    <div class="swiper-container mb-5">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+                            <div class="swiper-slide">
+                    <img 
+                        class="sk-welcome-swiper-img" 
+
+                        src="./assets/characters.png" 
+                    >
+                    
                 </div>
+                            <div class="swiper-slide">
+                    <img 
+                        class="sk-welcome-swiper-img" 
 
-                <img class="sk-about-image d-block d-lg-none" src="./assets/characters.png"
-                    style="width: 80%; margin: 0 auto;">
+                        src="./assets/characters.png" 
+                    >
+                    
+                </div>
+                            <div class="swiper-slide">
+                    <img 
+                        class="sk-welcome-swiper-img" 
+
+                        src="./assets/characters.png" 
+                    >
+                    
+                </div>
+                            <div class="swiper-slide">
+                    <img 
+                        class="sk-welcome-swiper-img" 
+
+                        src="./assets/characters.png" 
+                    >
+                    
+                </div>
+                            <div class="swiper-slide">
+                    <img 
+                        class="sk-welcome-swiper-img" 
+
+                        src="./assets/characters.png" 
+                    >
+                    
+                </div>
+                        
+        </div>
+    </div>
+</div>
 
 
-                <div class="sk-about-text my-5">
-                    Jungleverse is a multiplayer, play-to-earn game launching on the Ethereum blockchain. You can
-        battle, breed, and earn $JUNGLE with your Jungleverse characters, also known as Junglees. There
-        are 30 gen-1 species of Junglees that currently live in the Jungleverse. Each Junglee is a
-        programmatically generated NFT and only a total of 10,000 of them will ever be up for adoption.                </div>
-            </div> <!-- col -->
 
-            <div class="d-none d-lg-block col-4 col-xl-6 text-center">
-                <img class="sk-about-image" src="./assets/characters.png">
-            </div> <!-- col -->
-        </div> <!-- row -->
-
-
-    </div> <!-- section -->
-</div> <!-- bg-white -->    <div id="buy-strip" class="section-buy-strip px-5 py-4 py-xl-5">
+    <div id="buy-strip" class="section-buy-strip px-5 py-4 py-xl-5">
     <div class="container-xl">
         <div class="row row-buy-strip p-3 px-4 align-items-center justify-content-between mx-xl-4">
             <div class="col-12 col-lg-3">
-                <h3 class="text-uppercase sk-buy-strip-text-left mb-4 mb-lg-0 text-nowrap">Buy an APE</h3>
+                <h3 class="text-uppercase sk-buy-strip-text-left mb-4 mb-lg-0 text-nowrap">Buy a Skull Kitty</h3>
             </div>
             <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
                 The initial sale has sold out.To get your Bored Ape, checkout the collection on OpenSea.            </div>
             <div class="col-12 col-lg-3">
                 <button class="sk-buy-strip-text-button text-uppercase w-100">
-                    Buy an Ape on OpenSea                </button>
+                    Mint Now                </button>
             </div>
         </div>
     </div>
-</div>    <div id="roadmap" class="section-container section-roadmap  sk-section-border-bottom">
+</div>    <div id="roadmap" class="section-container section-roadmap">
 
     <!-- Title -->
     <div class="sk-bg-white py-5" style="margin-bottom: -1px;">
@@ -834,14 +774,8 @@ body.roadmap::before{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
                         <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
-                            <h5>Short term (Q3 2021)</h5>
+                            <h5 class="mb-0">25% Sold: 10 Skull Kitties Airdropped</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
-                                                                    <li>Concept and development ✅</li>
-                                                                    <li>Gen 1 Character Adoption + $JUNGLE Airdrop</li>
-                                                                    <li>Name Change Feature Launch</li>
-                                                                    <li>Claim a Free Weapon</li>
-                                                                    <li>Claim a Free Companion</li>
-                                                                    <li>Limited Edition Customized Merch (100% profits added to the community wallet)</li>
                                                             </ul>
                         </div>
                     </div>
@@ -871,13 +805,8 @@ body.roadmap::before{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5 text-md-end pe-md-4 ps-md-0 ps-4">
                         <div class="sk-timeline-card ms-lg-5 p-4 p-xl-5 text-md-start">
-                            <h5>Mid term (Q4 2021)</h5>
+                            <h5 class="mb-0">50% Sold: Skull Kitties Meme Challenge (1 ETH Pool)</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
-                                                                    <li>Jungleverse Breeding & Game Encyclopedia</li>
-                                                                    <li>In-house Marketplace</li>
-                                                                    <li>Breeding Mechanics Released</li>
-                                                                    <li>Battleground Game- Alpha</li>
-                                                                    <li>Character Updates</li>
                                                             </ul>
                         </div>
                     </div>
@@ -907,12 +836,8 @@ body.roadmap::before{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
                         <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
-                            <h5>Long term (2022)</h5>
+                            <h5 class="mb-0">65% Sold: Skull Kitties Art Challenge (2 ETH Pool)</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
-                                                                    <li>Battleground Game- Beta</li>
-                                                                    <li>Jungleverse Land</li>
-                                                                    <li>Adventure Game</li>
-                                                                    <li>Multi-world Universe</li>
                                                             </ul>
                         </div>
                     </div>
@@ -942,12 +867,8 @@ body.roadmap::before{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5 text-md-end pe-md-4 ps-md-0 ps-4">
                         <div class="sk-timeline-card ms-lg-5 p-4 p-xl-5 text-md-start">
-                            <h5>Long term (2022)</h5>
+                            <h5 class="mb-0">75% Sold: Skull Kitties Merch Store Launched</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
-                                                                    <li>Battleground Game- Beta</li>
-                                                                    <li>Jungleverse Land</li>
-                                                                    <li>Adventure Game</li>
-                                                                    <li>Multi-world Universe</li>
                                                             </ul>
                         </div>
                     </div>
@@ -963,9 +884,102 @@ body.roadmap::before{
         </div> <!-- row -->
 
     
+        <div class="sk-roadmap row  align-items-stretch right flex-nowrap">
+    
+            <!-- Spacer -->
+            <div class="col-1 flex-md-grow-1 ps-0 sk-roadmap-spacer sk-bg-white" style="margin-right: -1px;"></div>
+
+            <!-- Roadmap Contents -->
+            <div class="roadmap-col col col-md-8 col-lg-6 position-relative px-0 ">
+                <div id="sk-timeline-wrapper" class="sk-timeline-wrapper">
+                    <div class="sk-timeline-bar"></div>
+                </div>
+
+                <div class="sk-timeline-item">
+                    <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
+                        <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
+                            <h5 class="mb-0">85% Sold: Monthly Skull Kitties NFT Airdrops</h5>
+                            <ul class="mb-0 ps-3 ps-lg-4">
+                                                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- timeline-item -->
+
+
+            
+            </div>
+
+            <!-- Spacer -->
+            <div class="col-1 d-md-none  pe-0 sk-roadmap-spacer sk-bg-white"></div>
+
+        </div> <!-- row -->
+
+    
+        <div class="sk-roadmap row  align-items-stretch left flex-nowrap">
+    
+            <!-- Spacer -->
+            <div class="col-1 d-md-none ps-0 sk-roadmap-spacer sk-bg-white" style="margin-right: -1px;"></div>
+
+            <!-- Roadmap Contents -->
+            <div class="roadmap-col col col-md-8 col-lg-6 position-relative px-0 ">
+                <div id="sk-timeline-wrapper" class="sk-timeline-wrapper">
+                    <div class="sk-timeline-bar"></div>
+                </div>
+
+                <div class="sk-timeline-item">
+                    <div class="sk-bg-white  px-md-3 px-xl-5 text-md-end pe-md-4 ps-md-0 ps-4">
+                        <div class="sk-timeline-card ms-lg-5 p-4 p-xl-5 text-md-start">
+                            <h5 class="mb-0">100% Sold: 10 ETH Added to the Community Wallet</h5>
+                            <ul class="mb-0 ps-3 ps-lg-4">
+                                                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- timeline-item -->
+
+
+            
+            </div>
+
+            <!-- Spacer -->
+            <div class="col-1 flex-md-grow-1  pe-0 sk-roadmap-spacer sk-bg-white"></div>
+
+        </div> <!-- row -->
+
+    
+        <div class="sk-roadmap row  align-items-stretch right flex-nowrap">
+    
+            <!-- Spacer -->
+            <div class="col-1 flex-md-grow-1 ps-0 sk-roadmap-spacer sk-bg-white" style="margin-right: -1px;"></div>
+
+            <!-- Roadmap Contents -->
+            <div class="roadmap-col col col-md-8 col-lg-6 position-relative px-0 ">
+                <div id="sk-timeline-wrapper" class="sk-timeline-wrapper">
+                    <div class="sk-timeline-bar"></div>
+                </div>
+
+                <div class="sk-timeline-item">
+                    <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
+                        <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
+                            <h5 class="mb-0">Post Sell Out: Gamification Strategies implemented to drive value to the community</h5>
+                            <ul class="mb-0 ps-3 ps-lg-4">
+                                                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- timeline-item -->
+
+
+            
+            </div>
+
+            <!-- Spacer -->
+            <div class="col-1 d-md-none  pe-0 sk-roadmap-spacer sk-bg-white"></div>
+
+        </div> <!-- row -->
+
+    
 
     <div class="sk-bg-white py-5" style="margin-top: -1px;"></div>
-</div>    <div class="sk-bg-white sk-section-border-bottom">
+</div>    <div class="sk-bg-white">
     <div id="team" class="container section-container section-team text-center pb-5">
 
         <h5 style="font-weight: normal;">The</h5>
@@ -975,9 +989,8 @@ body.roadmap::before{
 
                             <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
                     <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
-                            <img class="sk-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/nolol.png">
+                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
+                            <img class="w-100 sk-team-member-img" src="./assets/nolol.png">
                         </div>
                         <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">Nolol</h4>
@@ -1000,9 +1013,8 @@ body.roadmap::before{
 
                             <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
                     <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
-                            <img class="sk-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/klecko.png">
+                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
+                            <img class="w-100 sk-team-member-img" src="./assets/klecko.png">
                         </div>
                         <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">kleck0</h4>
@@ -1025,9 +1037,8 @@ body.roadmap::before{
 
                             <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
                     <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
-                            <img class="sk-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/k3vin.png">
+                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
+                            <img class="w-100 sk-team-member-img" src="./assets/k3vin.png">
                         </div>
                         <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">K3vin</h4>
@@ -1050,9 +1061,8 @@ body.roadmap::before{
 
                             <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
                     <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0">
-                            <img class="sk-team-img-border" src="./assets/Ellipse.svg">
-                            <img src="./assets/0xvibe.png">
+                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
+                            <img class="w-100 sk-team-member-img" src="./assets/0xvibe.png">
                         </div>
                         <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
                             <h4 class="mb-0">0xVibe</h4>
@@ -1078,11 +1088,13 @@ body.roadmap::before{
 
         </div> <!-- row -->
     </div> <!-- team-container -->
-</div> <!-- bg-white -->    <div style="background: white">
+</div> <!-- bg-white -->    <div class="sk-bg-white">
     <div id="faq" class="container section-container section-faq" style="padding-bottom: 6rem;">
         <h5 style="font-weight: normal;">Still have doubts? Check our </h5>
-        <img class="mb-4" src="./assets/FAQ.svg">
 
+                    <h1 class="sk-faq-title-text mb-4">
+                FAQs            </h1>
+        
 
         <div class="accordion accordion-flush my-4" id="accordionFlushExample">
 
@@ -1269,6 +1281,9 @@ body.roadmap::before{
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- Scripts -->
     <script>
     (()=>{
@@ -1303,13 +1318,35 @@ body.roadmap::before{
             document.body.classList.remove('show-menu');
         })
 
-        window.addEventListener('scroll', function(){
-            initHeaderSticky();
-        })
-
-        initHeaderSticky();
-
+        
     })();
+</script>    <script>
+    const swiper = new Swiper('.swiper-container', {
+ 
+        coverflowEffect: {
+			rotate: 20,
+			stretch: 0,
+			depth: 350,
+			modifier: 1,
+			slideShadows : true,
+		},
+
+        effect: "coverflow", 
+        grabCursor: !0, 
+        loop: !0, 
+        centeredSlides: !0, 
+        mousewheel: !1, 
+        slidesPerView: 3, 
+        autoplay: {
+            delay: 800,
+            disableOnInteraction: !1
+        }, 
+        speed: 800, 
+        keyboard: {
+            enabled: !0,
+            onlyInViewport: !1
+        }
+    }); 
 </script>    <script>
 
 (()=>{

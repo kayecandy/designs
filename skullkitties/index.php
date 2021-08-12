@@ -29,6 +29,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <!-- Self - Base -->
     <?php include 'style.css.php' ?>
 
@@ -36,10 +39,10 @@
     <?php include 'components/loading/loading.css.php' ?>
     <?php include 'components/menu/menu.css.php' ?>
     <?php include 'components/header-bg/header-bg.css.php' ?>
-    <?php include 'components/section-welcome/section-welcome.css.php' ?>
+    <?php include 'components/section-welcome-carousel/section-welcome-carousel.css.php' ?>
     <?php include 'components/buy-strip/buy-strip.css.php' ?>
     <?php include 'components/roadmap/roadmap.css.php' ?>
-    <?php include 'components/team/team.css.php' ?>
+    <?php include 'components/team-2/team-2.css.php' ?>
     <?php include 'components/faqs/faqs.css.php' ?>
 
 </head>
@@ -48,10 +51,10 @@
     <?php include 'components/loading/loading.php' ?>
     <?php include 'components/menu/menu.php' ?>
     <?php include 'components/header-bg/header-bg.php' ?>
-    <?php include 'components/section-welcome/section-welcome.php' ?>
+    <?php include 'components/section-welcome-carousel/section-welcome-carousel.php' ?>
     <?php include 'components/buy-strip/buy-strip.php' ?>
     <?php include 'components/roadmap/roadmap.php' ?>
-    <?php include 'components/team/team.php' ?>
+    <?php include 'components/team-2/team-2.php' ?>
     <?php include 'components/faqs/faqs.php' ?>
     
 
@@ -60,9 +63,13 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- Scripts -->
     <?php include 'components/loading/loading.js.php' ?>
     <?php include 'components/menu/menu.js.php' ?>
+    <?php include 'components/section-welcome-carousel/section-welcome-carousel.js.php' ?>
     <?php include 'components/roadmap/roadmap.js.php' ?>
 </body>
 </html>

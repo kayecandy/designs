@@ -1,9 +1,17 @@
 <?php 
 
     const FAQS_CONTENT = [
-        'id'        => 'faq',
-        'titleImg'  => './assets/FAQ.svg',
-        'items'     => [
+        'id'                        => 'faq',
+        'isTitleImg'                => false,
+        'titleImg'                  => './assets/FAQ.svg',
+        'titleText'                 => 'FAQs',
+        'titleColor'                => COLORS[1],
+        'titleTextTag'              => 'h1',
+
+        'faqHeaderColor'            => COLORS[1],
+        'faqHeaderActiveColor'      => 'black',
+
+        'items'             => [
             [
                 'question'  => 'What wallets do you support?',
                 'answer'    => 'faq_answer1'
