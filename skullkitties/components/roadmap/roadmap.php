@@ -3,7 +3,21 @@
     <!-- Title -->
     <div class="<?= PREFIX ?>-bg-white py-5" style="margin-bottom: -1px;">
         <div  class="container <?= PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title">
-            <img class="<?= PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title mb-4 w-100" src="<?= ROADMAP_CONTENTS['titleImg'] ?>">
+
+            <?php if(ROADMAP_CONTENTS['isTitleImg']): ?>
+                <img class="<?= PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title-img mb-4 w-100" src="<?= ROADMAP_CONTENTS['titleImg'] ?>">
+            <?php else: ?>
+                <<?= ROADMAP_CONTENTS['titleTextTag'] ?>
+                    class="<?= PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title-text"
+                >
+                
+                    <?= ROADMAP_CONTENTS['titleText'] ?>
+                </<?= ROADMAP_CONTENTS['titleTextTag'] ?>>
+
+
+            <?php endif; ?>
+            
+            
         </div>
     </div>
 

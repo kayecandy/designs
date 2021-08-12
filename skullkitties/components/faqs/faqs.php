@@ -5,7 +5,7 @@
         <?php if(FAQS_CONTENT['isTitleImg']): ?>
             <img class="mb-4" src="<?= FAQS_CONTENT['titleImg'] ?>">
         <?php else: ?>
-            <<?= FAQS_CONTENT['titleTextTag'] ?> class="<?= PREFIX ?>-<?= FAQS_CONTENT['id'] ?>-title-text mb-4">
+            <<?= FAQS_CONTENT['titleTextTag'] ?> class="<?= PREFIX ?>-<?= FAQS_CONTENT['id'] ?>-title-text mb-5">
                 <?= FAQS_CONTENT['titleText'] ?>
             </<?= FAQS_CONTENT['titleTextTag'] ?>>
         <?php endif; ?>

@@ -23,9 +23,10 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
     /* max-width: 900px; */
     margin: 0 auto;
     align-items: flex-start;
+    overflow: hidden;
 }
 
-.section-<?= ROADMAP_CONTENTS['id'] ?> div<?= '.' . PREFIX ?>-roadmap-title{
+.section-<?= ROADMAP_CONTENTS['id'] ?> div<?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title-img{
     /* height: 100vh; */
     /* display: flex; */
     top: 6rem;
@@ -34,8 +35,15 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
     position: sticky;
 }
 
-.section-<?= ROADMAP_CONTENTS['id'] ?> img<?= '.' . PREFIX ?>-roadmap-title{
+.section-<?= ROADMAP_CONTENTS['id'] ?> img<?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title-img{
     max-width: 250px;
+}
+
+.section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title-text
+{
+    color: <?= ROADMAP_CONTENTS['titleColor'] ?>;
+    font-weight: 900;
+    font-size: <?= ROADMAP_CONTENTS['titleTextSize'] ?>;
 }
 
 .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . ROADMAP_CONTENTS['id'] ?>-col{
@@ -133,7 +141,9 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
     box-shadow: 0 0 5px 0 rgb(39 25 77 / 2%), 0 3px 20px 0 rgb(112 81 239 / 4%), 0 10px 28px 0 rgb(39 25 77 / 3%);
     border-radius: 1rem;
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0;
+
+    transform: translateX(5rem);
 
     transition: all 0.3s ease-in-out;
 
@@ -142,9 +152,11 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
 
 }
 
+
 .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-timeline-item:hover <?= '.' . PREFIX ?>-timeline-card,
 .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-timeline-item.active <?= '.' . PREFIX ?>-timeline-card{
     opacity: 1;
+    transform: translateX(0);
 }
 
 .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-timeline-card ul{
@@ -165,10 +177,15 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
         left: unset;
         right: 0;
     }
+
+    .<?= PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>.left .<?= PREFIX ?>-timeline-card{
+        transform: translateX(-5rem);
+    }
+
 }
 
 @media only screen and (max-width:768px) {
-    .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-roadmap-title{
+    .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title-img{
         top: 0;
         position: relative;
     }
@@ -179,7 +196,7 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
 }
 
 @media only screen and (max-width:576px) {
-    .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-roadmap-spacer{
+    .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-spacer{
         width: 0%;
     }
 }

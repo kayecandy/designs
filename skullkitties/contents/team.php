@@ -1,7 +1,13 @@
 <?php 
     const TEAM_CONTENTS = [
         'id'            => 'team',
-        'titleImg'      => './assets/Team.svg',
+        'isTitleImg'                => false,
+        'titleImg'                  => './assets/Team.svg',
+        'titleText'                 => 'Team',
+        'titleColor'                => COLORS[1],
+        'titleTextTag'              => 'h1',
+        'titleTextSize'             => '3.5rem',
+
         'members'   => [
             [
                 'name'          => 'Nolol',

@@ -3,6 +3,7 @@
     .<?= PREFIX ?>-<?= FAQS_CONTENT['id'] ?>-title-text{
         color: <?= FAQS_CONTENT['titleColor'] ?>;
         font-weight: 900;
+        font-size: <?= FAQS_CONTENT['titleTextSize'] ?>;
     }
 
     .section-<?= FAQS_CONTENT['id'] ?> .accordion .accordion-item{

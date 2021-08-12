@@ -2,7 +2,15 @@
     <div id="<?= TEAM_CONTENTS['id'] ?>" class="container section-container section-<?= TEAM_CONTENTS['id'] ?> text-center pb-5">
 
         <h5 style="font-weight: normal;">The</h5>
-        <img class="mb-4" src="<?= TEAM_CONTENTS['titleImg'] ?>">
+        <?php if(TEAM_CONTENTS['isTitleImg']): ?>
+            <img class="mb-4" src="<?= TEAM_CONTENTS['titleImg'] ?>">
+        <?php else: ?>
+            <<?= TEAM_CONTENTS['titleTextTag'] ?>
+            >
+                <?= TEAM_CONTENTS['titleText'] ?>
+            </<?= TEAM_CONTENTS['titleTextTag'] ?>>
+        <?php endif; ?>
+
 
         <div class="<?= PREFIX ?>-<?= TEAM_CONTENTS['id'] ?>-container row my-5 align-items-stretch">
 

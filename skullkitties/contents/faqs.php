@@ -7,6 +7,7 @@
         'titleText'                 => 'FAQs',
         'titleColor'                => COLORS[1],
         'titleTextTag'              => 'h1',
+        'titleTextSize'             => '3.5rem',
 
         'faqHeaderColor'            => COLORS[1],
         'faqHeaderActiveColor'      => 'black',
