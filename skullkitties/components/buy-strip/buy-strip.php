@@ -2,7 +2,7 @@
     <div class="container-xl">
         <div class="row row-<?= BUY_STRIP_CONTENTS['id'] ?> p-3 px-4 align-items-center justify-content-between mx-xl-4">
             <div class="col-12 col-lg-3">
-                <h3 class="text-uppercase <?= PREFIX ?>-<?= BUY_STRIP_CONTENTS['id'] ?>-text-left mb-4 mb-lg-0 text-nowrap"><?= BUY_STRIP_CONTENTS['text-left'] ?></h3>
+                <h3 class="text-uppercase <?= PREFIX ?>-<?= BUY_STRIP_CONTENTS['id'] ?>-text-left mb-4 mb-lg-0 text-sm-nowrap"><?= BUY_STRIP_CONTENTS['text-left'] ?></h3>
             </div>
             <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
                 <?= BUY_STRIP_CONTENTS['text-center'] ?>

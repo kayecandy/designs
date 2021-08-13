@@ -1,6 +1,6 @@
 <style>
 html, body{
-min-width: 400px;
+/* min-width: 320px; */
 }
 
 body{

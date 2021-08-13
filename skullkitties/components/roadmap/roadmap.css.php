@@ -167,7 +167,7 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
     padding-left: 0.4rem;
 }
 
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 768px){
     <?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>.right <?= '.' . PREFIX ?>-timeline-item::before,
     <?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>.left <?= '.' . PREFIX ?>-timeline-item::after{
         content: "";
@@ -184,7 +184,7 @@ body.<?= ROADMAP_CONTENTS['id'] ?>::before{
 
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:767px) {
     .section-<?= ROADMAP_CONTENTS['id'] ?> <?= '.' . PREFIX ?>-<?= ROADMAP_CONTENTS['id'] ?>-title-img{
         top: 0;
         position: relative;
