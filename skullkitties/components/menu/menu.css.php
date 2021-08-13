@@ -61,6 +61,7 @@
     /* margin-left: auto; */
 }
 
+button<?= '.' . PREFIX ?>-connected-btn,
 button<?= '.' . PREFIX ?>-disconnected-btn{
     border-radius: 10rem;
     background-color: <?= MENU_CONTENTS['disconnectedBg'] ?>;
@@ -73,6 +74,12 @@ button<?= '.' . PREFIX ?>-disconnected-btn{
     border: 1px solid;
 }
 
+button<?= '.' . PREFIX ?>-connected-btn{
+    background-color: <?= MENU_CONTENTS['connectedBg'] ?>;
+    color: <?= MENU_CONTENTS['connectedColor'] ?>;
+}
+
+<?= '.' . PREFIX ?>-connected-btn::before,
 <?= '.' . PREFIX ?>-disconnected-btn::before{
     content: "";
     display: inline-block;
@@ -83,11 +90,19 @@ button<?= '.' . PREFIX ?>-disconnected-btn{
     margin-right: 0.5rem;
 }
 
+<?= '.' . PREFIX ?>-connected-btn::before{
+    background-color: <?= MENU_CONTENTS['connectedIconColor'] ?>;
+}
+
 button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
     background-color: transparent;
-    color: #535353;
-
+    color: <?= MENU_CONTENTS['disconnectedColor'] ?>;
+    border-color: transparent;
     display: none;
+}
+
+button<?= '.' . PREFIX ?>-connected-btn.mobile{
+    color: <?= MENU_CONTENTS['connectedColor'] ?>;
 }
 
 <?= '.' . PREFIX ?>-header-item{
@@ -203,13 +218,16 @@ button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
         display: block;
     }
 
+    <?= '.' . PREFIX ?>-connected-container,
     <?= '.' . PREFIX ?>-disconnected-container{
         display: none;
     }
 
+    button<?= '.' . PREFIX ?>-connected-btn.mobile,
     button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
         display: block;
     }
+    
 }
 
 </style>

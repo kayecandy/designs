@@ -39,9 +39,19 @@
         'menuItemHoverBg'       => 'transparent',
         'menuItemHoverColor'    => COLORS[1],
 
+
+        'connectionStatus'      => 'disconnected', /** 'connected' | 'disconnected' */
+
+        'disconnectedText'      => 'Disconnected',
         'disconnectedBg'        => 'transparent',
         'disconnectedColor'     => '#585858',
-        'disconnectedIconColor' => '#585858' 
+        'disconnectedIconColor' => '#585858', 
+
+
+        'connectedText'      => 'Connected',
+        'connectedBg'        => 'transparent',
+        'connectedColor'     => 'green',
+        'connectedIconColor' => 'green' 
     ];
 
 ?>

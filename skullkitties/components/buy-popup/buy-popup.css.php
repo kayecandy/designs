@@ -54,10 +54,41 @@ button.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-quantity-btn{
 }
 
 
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?> .modal-content.modal-loading{
+    background: <?= BUY_POPUP_CONTENTS['loadingBg'] ?>;
+}
+
+
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?> .modal-content,
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?> .modal-dialog.modal-success,
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>[data-status="success"] .modal-dialog.modal-init{
+
+    display: none;
+}
+
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>[data-status="buy"] .modal-content.modal-buy,
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>[data-status="loading"] .modal-content.modal-loading,
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>[data-status="success"] .modal-dialog.modal-success,
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>[data-status="success"] .modal-dialog.modal-success .modal-content{
+    display: block;
+}
+
+
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>[data-status="success"] .success-character{
+    width: 300px;
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+
+.<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>[data-status="success"] .congrats-link{
+    color: <?= BUY_POPUP_CONTENTS['congratsLinksColor'] ?>;
+}
+
 
 
 @media only screen and (min-width: 576px){
-    .<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?> .modal-dialog{
+    .<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?> .modal-dialog.modal-sm{
         max-width: 380px;
     }
 }

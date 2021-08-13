@@ -7,7 +7,11 @@
 
         <div class="<?= PREFIX ?>-header-items col-auto d-flex">
             <div class="d-flex align-items-center">
-                <button class="<?= PREFIX ?>-disconnected-btn mobile my-4 ps-2">Disconnected</button>
+                <?php if(MENU_CONTENTS['connectionStatus'] == 'disconnected'): ?>
+                    <button class="<?= PREFIX ?>-disconnected-btn mobile my-4 ps-2"><?= MENU_CONTENTS['disconnectedText'] ?></button>
+                <?php else: ?>
+                    <button class="<?= PREFIX ?>-connected-btn mobile my-4 ps-2"><?= MENU_CONTENTS['connectedText'] ?></button>
+                <?php endif; ?>
                 
                 <button id="<?= PREFIX ?>-menu-close" class="<?= PREFIX ?>-menu-close">x</button>
             </div>
@@ -24,9 +28,17 @@
             
         </div>
 
-        <div class="ms-auto <?= PREFIX ?>-disconnected-container">
-            <button class="<?= PREFIX ?>-disconnected-btn">Disconnected</button>
-        </div>
+        <?php if(MENU_CONTENTS['connectionStatus'] == 'disconnected'): ?>
+            <div class="ms-auto <?= PREFIX ?>-disconnected-container">
+                <button class="<?= PREFIX ?>-disconnected-btn"><?= MENU_CONTENTS['disconnectedText'] ?></button>
+            </div>
+        <?php else: ?>
+            <div class="ms-auto <?= PREFIX ?>-connected-container">
+                <button class="<?= PREFIX ?>-connected-btn"><?= MENU_CONTENTS['connectedText'] ?></button>
+            </div>
+        <?php endif; ?>
+
+
 
         <div id="<?= PREFIX ?>-mobile-menu" class="<?= PREFIX ?>-header-burger">
             <?php include 'assets/menu.svg' ?>

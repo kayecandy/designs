@@ -202,6 +202,7 @@ button.btn-yellow{
     /* margin-left: auto; */
 }
 
+button.sk-connected-btn,
 button.sk-disconnected-btn{
     border-radius: 10rem;
     background-color: transparent;
@@ -214,6 +215,12 @@ button.sk-disconnected-btn{
     border: 1px solid;
 }
 
+button.sk-connected-btn{
+    background-color: transparent;
+    color: green;
+}
+
+.sk-connected-btn::before,
 .sk-disconnected-btn::before{
     content: "";
     display: inline-block;
@@ -224,11 +231,19 @@ button.sk-disconnected-btn{
     margin-right: 0.5rem;
 }
 
+.sk-connected-btn::before{
+    background-color: green;
+}
+
 button.sk-disconnected-btn.mobile{
     background-color: transparent;
-    color: #535353;
-
+    color: #585858;
+    border-color: transparent;
     display: none;
+}
+
+button.sk-connected-btn.mobile{
+    color: green;
 }
 
 .sk-header-item{
@@ -331,13 +346,16 @@ button.sk-disconnected-btn.mobile{
         display: block;
     }
 
+    .sk-connected-container,
     .sk-disconnected-container{
         display: none;
     }
 
+    button.sk-connected-btn.mobile,
     button.sk-disconnected-btn.mobile{
         display: block;
     }
+    
 }
 
 </style>    <style>
@@ -792,10 +810,41 @@ button.sk-buy-popup-quantity-btn{
 }
 
 
+.sk-buy-popup .modal-content.modal-loading{
+    background: #e0dee0;
+}
+
+
+.sk-buy-popup .modal-content,
+.sk-buy-popup .modal-dialog.modal-success,
+.sk-buy-popup[data-status="success"] .modal-dialog.modal-init{
+
+    display: none;
+}
+
+.sk-buy-popup[data-status="buy"] .modal-content.modal-buy,
+.sk-buy-popup[data-status="loading"] .modal-content.modal-loading,
+.sk-buy-popup[data-status="success"] .modal-dialog.modal-success,
+.sk-buy-popup[data-status="success"] .modal-dialog.modal-success .modal-content{
+    display: block;
+}
+
+
+.sk-buy-popup[data-status="success"] .success-character{
+    width: 300px;
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+
+.sk-buy-popup[data-status="success"] .congrats-link{
+    color: #3b393b;
+}
+
 
 
 @media only screen and (min-width: 576px){
-    .sk-buy-popup .modal-dialog{
+    .sk-buy-popup .modal-dialog.modal-sm{
         max-width: 380px;
     }
 }
@@ -822,8 +871,8 @@ button.sk-buy-popup-quantity-btn{
 
         <div class="sk-header-items col-auto d-flex">
             <div class="d-flex align-items-center">
-                <button class="sk-disconnected-btn mobile my-4 ps-2">Disconnected</button>
-                
+                                    <button class="sk-disconnected-btn mobile my-4 ps-2">Disconnected</button>
+                                
                 <button id="sk-menu-close" class="sk-menu-close">x</button>
             </div>
             
@@ -852,9 +901,11 @@ button.sk-buy-popup-quantity-btn{
                         
         </div>
 
-        <div class="ms-auto sk-disconnected-container">
-            <button class="sk-disconnected-btn">Disconnected</button>
-        </div>
+                    <div class="ms-auto sk-disconnected-container">
+                <button class="sk-disconnected-btn">Disconnected</button>
+            </div>
+        
+
 
         <div id="sk-mobile-menu" class="sk-header-burger">
             <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>        </div>
@@ -1620,18 +1671,27 @@ button.sk-buy-popup-quantity-btn{
         </div>
     </div>
 </footer>    <!-- Modal -->
-<div class="modal fade sk-buy-popup" id="buy-popup" tabindex="-1" aria-labelledby="buy-popupLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
-        <div class="modal-content">
+<div 
+    class="modal fade sk-buy-popup" 
+    id="buy-popup" 
+    tabindex="-1"
+    aria-labelledby="buy-popupLabel" 
+    aria-hidden="true"
+
+    data-status="buy"
+>
+    <div class="modal-dialog modal-sm modal-dialog-centered modal-init">
+        <div class="modal-content modal-buy">
             <div class="modal-header p-0">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <div id="sk-buy-popup-quantity" class="sk-buy-popup-quantity py-4 my-3" data-max="20" data-min="1">
+                <div id="sk-buy-popup-quantity"
+                    class="sk-buy-popup-quantity py-4 my-3"
+                    data-max="20" data-min="1">
                     <div>
-                        <button 
-                        id="sk-buy-popup-quantity-btn-minus"
-                        class="sk-buy-popup-quantity-btn">
+                        <button id="sk-buy-popup-quantity-btn-minus"
+                            class="sk-buy-popup-quantity-btn">
                             -
                         </button>
                     </div>
@@ -1645,9 +1705,8 @@ button.sk-buy-popup-quantity-btn{
                     </div>
 
                     <div>
-                        <button 
-                        id="sk-buy-popup-quantity-btn-plus"
-                        class="sk-buy-popup-quantity-btn">
+                        <button id="sk-buy-popup-quantity-btn-plus"
+                            class="sk-buy-popup-quantity-btn">
                             +
                         </button>
                     </div>
@@ -1655,10 +1714,11 @@ button.sk-buy-popup-quantity-btn{
 
                 <div class="sk-buy-popup-e px-4 py-3">
                     <img style="height: 1.5rem" class="me-2" src="assets/icon-adopt.svg">
-                    <div id="sk-buy-popup-price" data-baseprice="0.02">0.02</div>
+                    <div id="sk-buy-popup-price"
+                        data-baseprice="0.02">0.02                    </div>
                 </div>
 
-                
+
             </div>
             <div class="modal-footer justify-content-center pt-1">
                 <div style="color: black">
@@ -1667,10 +1727,60 @@ button.sk-buy-popup-quantity-btn{
                     </small>
                 </div>
                 <hr>
-                <button type="button" class="btn w-100" data-bs-dismiss="modal">Confirm</button>
-                
+                <button id="sk-buy-popup-buy-confirm" type="button" class="btn w-100">Confirm</button>
+
             </div>
         </div>
+
+        <div class="modal-content modal-loading">
+            <div class="modal-header p-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body text-center">
+                <img src="assets/loading.gif">
+
+                <h4 class="mt-3" style="color: #3b393b">Check metamask!</h4>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <div class="modal-dialog modal-lg modal-success">
+        <div class="modal-content">
+            <div class="modal-header p-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+    
+            <div class="modal-body text-center">
+                <img class="success-character" src="./assets/characters.png">
+                <h4 class="mt-3" style="color: #3b393b">
+                    Congrats on Skull Kitty #XXX                </h4>
+            </div>
+            <div class="modal-footer justify-content-between px-5">
+                                    <a class="congrats-link" href="#">
+                        <button>
+                            View TX
+                        </button>
+                    </a>
+                
+                                    <a class="congrats-link" href="#">
+                        <button>
+                            View on Opensea
+                        </button>
+                    </a>
+                
+                                    <a class="congrats-link" href="#">
+                        <button>
+                            Share on Twitter
+                        </button>
+                    </a>
+                
+                            </div>
+        </div>
+
     </div>
 </div>    
 
@@ -1787,11 +1897,15 @@ button.sk-buy-popup-quantity-btn{
 
 </script>    <script>
     (()=>{
+        const domModal = document.getElementById('buy-popup');
+
         const domAdoptQuantity = document.getElementById("sk-buy-popup-quantity");
         const domAdoptQuantityMinus = document.getElementById('sk-buy-popup-quantity-btn-minus');
         const domAdoptQuantityPlus = document.getElementById('sk-buy-popup-quantity-btn-plus');
         const domAdoptQuantityValue = document.getElementById('sk-buy-popup-quantity-value');
         const domAdoptPrice = document.getElementById('sk-buy-popup-price');
+
+        const domBuyButton = document.getElementById('sk-buy-popup-buy-confirm');
 
 
         function updateAdoptQuantityValue(delta){
@@ -1812,6 +1926,17 @@ button.sk-buy-popup-quantity-btn{
         domAdoptQuantityPlus.addEventListener('click', function(){
             updateAdoptQuantityValue(1);
         })
+
+        domBuyButton.addEventListener('click', function(){
+            domModal.setAttribute('data-status', 'loading');
+
+
+            setTimeout(() => {
+                domModal.setAttribute('data-status', 'success');
+            }, 2000);
+        })
+
+        
     })();
 </script>
 
