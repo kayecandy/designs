@@ -92,7 +92,7 @@
         (()=>{
             const viewport = document.getElementById('<?= PREFIX ?>-viewport');
 
-            window.addEventListener('resize', function(){
+            function resizeViewport(){
                 if(screen.width < <?= MIN_WIDTH ?>){
                     viewport.setAttribute('content', 'width=' + <?= MIN_WIDTH ?>);
                 }else{
@@ -100,8 +100,11 @@
                         'width=device-width, initial-scale=1'
                     )
                 }
+            }
 
-            })
+
+            window.addEventListener('resize', resizeViewport);
+            window.addEventListener('load', resizeViewport);
 
         })();
     </script>

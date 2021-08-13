@@ -1830,7 +1830,7 @@ button.sk-buy-popup-quantity-btn{
         (()=>{
             const viewport = document.getElementById('sk-viewport');
 
-            window.addEventListener('resize', function(){
+            function resizeViewport(){
                 if(screen.width < 400){
                     viewport.setAttribute('content', 'width=' + 400);
                 }else{
@@ -1838,8 +1838,11 @@ button.sk-buy-popup-quantity-btn{
                         'width=device-width, initial-scale=1'
                     )
                 }
+            }
 
-            })
+
+            window.addEventListener('resize', resizeViewport);
+            window.addEventListener('load', resizeViewport);
 
         })();
     </script>
