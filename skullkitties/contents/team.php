@@ -1,6 +1,6 @@
 <?php 
     const TEAM_CONTENTS = [
-        'id'            => 'team',
+        'id'                        => 'team',
         'isTitleImg'                => false,
         'titleImg'                  => './assets/Team.svg',
         'titleText'                 => 'Team',

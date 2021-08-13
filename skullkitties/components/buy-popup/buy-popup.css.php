@@ -27,8 +27,8 @@
     border-radius: 1rem;
     font-size: 1.5rem;
     font-weight: 800;
-    color: black;
-    background: whitesmoke;
+    color: <?= BUY_POPUP_CONTENTS['priceDivColor'] ?>;;
+    background: <?= BUY_POPUP_CONTENTS['priceDivBg'] ?>;
     align-items: center;
 }
 

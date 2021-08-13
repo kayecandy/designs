@@ -6,12 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-e px-4 py-5">
-                    <img style="height: 1.5rem" class="me-2" src="<?= BUY_POPUP_CONTENTS['priceIcon'] ?>">
-                    <div id="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-price" data-baseprice="<?= BUY_POPUP_CONTENTS['basePrice'] ?>"><?= BUY_POPUP_CONTENTS['basePrice'] ?></div>
-                </div>
-
-                <div id="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-quantity" class="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-quantity py-4 mt-3" data-max="<?= BUY_POPUP_CONTENTS['maxQty'] ?>" data-min="<?= BUY_POPUP_CONTENTS['minQty'] ?>">
+            <div id="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-quantity" class="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-quantity py-4 my-3" data-max="<?= BUY_POPUP_CONTENTS['maxQty'] ?>" data-min="<?= BUY_POPUP_CONTENTS['minQty'] ?>">
                     <div>
                         <button 
                         id="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-quantity-btn-minus"
@@ -20,7 +15,7 @@
                         </button>
                     </div>
                     <div class="px-3">
-                        <div class="text-uppercase" style="font-size: 0.7rem;">
+                        <div class="text-uppercase" style="<?= BUY_POPUP_CONTENTS['qtyLabelStyle'] ?>">
                             Quantity
                         </div>
                         <div class="text-center">
@@ -36,16 +31,23 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-e px-4 py-3">
+                    <img style="height: 1.5rem" class="me-2" src="<?= BUY_POPUP_CONTENTS['priceIcon'] ?>">
+                    <div id="<?= PREFIX ?>-<?= BUY_POPUP_CONTENTS['id'] ?>-price" data-baseprice="<?= BUY_POPUP_CONTENTS['basePrice'] ?>"><?= BUY_POPUP_CONTENTS['basePrice'] ?></div>
+                </div>
+
+                
             </div>
             <div class="modal-footer justify-content-center pt-1">
-                <button type="button" class="btn btn-yellow w-100" data-bs-dismiss="modal">Confirm</button>
-
-                <hr>
-                <div>
+                <div style="color: black">
                     <small>
                         XXX Remaining
                     </small>
                 </div>
+                <hr>
+                <button type="button" class="btn w-100" data-bs-dismiss="modal">Confirm</button>
+                
             </div>
         </div>
     </div>

@@ -16,7 +16,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
     <title>Skull Kitties</title>
 
     <!-- Font -->
@@ -316,7 +317,7 @@ button.sk-disconnected-btn.mobile{
 
 </style>    <style>
 
-.section-header{
+.section-mint{
     background-image: url("./assets/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -333,25 +334,25 @@ button.sk-disconnected-btn.mobile{
 
 }
 
-.section-header .adopt-now{
+.section-mint .adopt-now{
     font-size: 1.75rem;
     padding: 1.5rem 2rem;
 }
 
 @media only screen and (max-width: 1200px) {
 
-    .section-header{
+    .section-mint{
         padding-top: 46%; 
     }
 
-    .section-header .adopt-now{
+    .section-mint .adopt-now{
         padding: 1rem 2rem;
     }
 }
 
 
 @media only screen and (max-width: 576px) {
-    .section-header{
+    .section-mint{
         padding-top: 72%;
         background-position: bottom left 50%;
     }
@@ -738,8 +739,8 @@ body.roadmap::before{
     border-radius: 1rem;
     font-size: 1.5rem;
     font-weight: 800;
-    color: black;
-    background: whitesmoke;
+    color: white;;
+    background: #000000;
     align-items: center;
 }
 
@@ -808,24 +809,20 @@ button.sk-buy-popup-quantity-btn{
 
 
             
-                <div class="sk-header-item"><a href="#">
-                    Menu 1                </a></div>
+                <div class="sk-header-item"><a href="./#roadmap">
+                    Roadmap                </a></div>
 
             
-                <div class="sk-header-item"><a href="#">
-                    Menu 2                </a></div>
+                <div class="sk-header-item"><a href="./#team">
+                    Team                </a></div>
 
             
-                <div class="sk-header-item"><a href="#">
-                    Menu 3                </a></div>
+                <div class="sk-header-item"><a href="./#faq">
+                    FAQ                </a></div>
 
             
-                <div class="sk-header-item"><a href="#">
-                    Menu 4                </a></div>
-
-            
-                <div class="sk-header-item"><a href="#">
-                    Menu 5                </a></div>
+                <div class="sk-header-item"><a href="#mint">
+                    Mint                </a></div>
 
                         
         </div>
@@ -840,7 +837,7 @@ button.sk-buy-popup-quantity-btn{
     </div>
 
 </div>    
-<div id="header" class="section-container section-header pb-4 pb-lg-5">
+<div id="mint" class="section-container section-mint pb-4 pb-lg-5">
 
 <button class="adopt-now" data-bs-toggle="modal" data-bs-target="#buy-popup">Mint Now</button>
 
@@ -1640,12 +1637,7 @@ button.sk-buy-popup-quantity-btn{
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="sk-buy-popup-e px-4 py-5">
-                    <img style="height: 1.5rem" class="me-2" src="assets/icon-adopt.svg">
-                    <div id="sk-buy-popup-price" data-baseprice="0.05">0.05</div>
-                </div>
-
-                <div id="sk-buy-popup-quantity" class="sk-buy-popup-quantity py-4 mt-3" data-max="20" data-min="1">
+            <div id="sk-buy-popup-quantity" class="sk-buy-popup-quantity py-4 my-3" data-max="20" data-min="1">
                     <div>
                         <button 
                         id="sk-buy-popup-quantity-btn-minus"
@@ -1654,7 +1646,7 @@ button.sk-buy-popup-quantity-btn{
                         </button>
                     </div>
                     <div class="px-3">
-                        <div class="text-uppercase" style="font-size: 0.7rem;">
+                        <div class="text-uppercase" style="font-size: 0.7rem; font-weight: 900; color: #D5A021">
                             Quantity
                         </div>
                         <div class="text-center">
@@ -1670,16 +1662,23 @@ button.sk-buy-popup-quantity-btn{
                         </button>
                     </div>
                 </div>
+
+                <div class="sk-buy-popup-e px-4 py-3">
+                    <img style="height: 1.5rem" class="me-2" src="assets/icon-adopt.svg">
+                    <div id="sk-buy-popup-price" data-baseprice="0.02">0.02</div>
+                </div>
+
+                
             </div>
             <div class="modal-footer justify-content-center pt-1">
-                <button type="button" class="btn btn-yellow w-100" data-bs-dismiss="modal">Confirm</button>
-
-                <hr>
-                <div>
+                <div style="color: black">
                     <small>
                         XXX Remaining
                     </small>
                 </div>
+                <hr>
+                <button type="button" class="btn w-100" data-bs-dismiss="modal">Confirm</button>
+                
             </div>
         </div>
     </div>

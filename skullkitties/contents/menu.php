@@ -5,25 +5,21 @@
 
         'menuItems' => [
             [
-                'text'  => 'Menu 1',
-                'link'  => '#'
+                'text'  => 'Roadmap',
+                'link'  => './#roadmap'
             ],
             [
-                'text'  => 'Menu 2',
-                'link'  => '#'
+                'text'  => 'Team',
+                'link'  => './#team'
             ],
             [
-                'text'  => 'Menu 3',
-                'link'  => '#'
+                'text'  => 'FAQ',
+                'link'  => './#faq'
             ],
             [
-                'text'  => 'Menu 4',
-                'link'  => '#'
-            ],
-            [
-                'text'  => 'Menu 5',
-                'link'  => '#'
-            ],
+                'text'  => 'Mint',
+                'link'  => '#mint'
+            ]
             
         ],
 

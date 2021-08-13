@@ -1,7 +1,7 @@
 <?php
 
     const HEADER_BG_CONTENTS = [
-        'id'                => 'header',
+        'id'                => 'mint',
         'backgroundImg'     => './assets/bg.png',
 
         'buttonModal'       => 'buy-popup',
