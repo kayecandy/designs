@@ -27,6 +27,9 @@
     <meta id="<?= PREFIX ?>-viewport" name="viewport" content="width=device-width, initial-scale=1">
     <title>Skull Kitties</title>
 
+    <link rel="icon" href="./assets/logo.png">
+
+
     <!-- Font -->
     <link href="./assets/fonts/carmen-sans/style.css" rel="stylesheet">
 

@@ -96,7 +96,8 @@ button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
 
     padding-bottom: 0;
     /* padding: 0 1.5rem; */
-
+    
+    color: inherit;
     background-color: <?= MENU_CONTENTS['menuItemBg'] ?>;
     border-radius: 1rem;
     margin: 0 0.5rem;
@@ -160,7 +161,7 @@ button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
 @media only screen and (max-width: 1000px) {
 
     <?= '.' . PREFIX ?>-header-wrapper{
-        background-color: transparent;
+        background-color: <?= MENU_CONTENTS['mobileBg'] ?>;
         box-shadow: none;
     }
 
@@ -173,7 +174,8 @@ button<?= '.' . PREFIX ?>-disconnected-btn.mobile{
         top: 0;
         right: 0;
         height: 100%;
-        background: whitesmoke;
+        background: <?= MENU_CONTENTS['mobileSideBg'] ?>;
+        color: <?= MENU_CONTENTS['mobileColor'] ?>;
         padding: 2rem 0.5rem;
         padding-top: 0.5rem;
         flex-direction: column;

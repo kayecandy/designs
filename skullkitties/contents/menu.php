@@ -1,6 +1,6 @@
 <?php
     const MENU_CONTENTS = [
-        'logoImg'   => './assets/logo.png',
+        'logoImg'   => './assets/logo-text.png',
         'logoLink'  => './',
 
         'menuItems' => [
@@ -23,9 +23,13 @@
             
         ],
 
-        'background'            => 'black',
+        'background'            => COLORS[0],
         'color'                 => 'white',
         'sticky'                => false,
+
+        'mobileBg'              => COLORS[0],
+        'mobileSideBg'          => COLORS[1],
+        'mobileColor'           => COLORS[0],
 
         'menuItemBg'            => 'transparent',
         'menuItemHoverBg'       => 'transparent',

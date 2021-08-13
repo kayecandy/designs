@@ -29,7 +29,7 @@
         </div>
 
         <div id="<?= PREFIX ?>-mobile-menu" class="<?= PREFIX ?>-header-burger">
-            <img src="./assets/menu.svg">
+            <?php include 'assets/menu.svg' ?>
         </div>
     </div>
 
