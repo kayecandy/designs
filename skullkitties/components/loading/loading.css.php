@@ -15,4 +15,10 @@
     body.loaded .<?= PREFIX ?>-<?= LOADING_CONTENTS['id'] ?>{
         display: none;
     }
+
+    .<?= PREFIX ?>-<?= LOADING_CONTENTS['id'] ?> img,
+    .<?= PREFIX ?>-<?= LOADING_CONTENTS['id'] ?> svg{
+        width: <?= LOADING_CONTENTS['iconWidth'] ?>;
+        height: <?= LOADING_CONTENTS['iconHeight'] ?>;
+    }
 </style>
