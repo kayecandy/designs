@@ -8,4 +8,5 @@ const COLORS = [
     '#fad220'
 ];
 
+define('MIN_WIDTH', 400);
 ?>

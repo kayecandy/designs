@@ -24,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=400, initial-scale=1">
+    <meta id="<?= PREFIX ?>-viewport" name="viewport" content="width=device-width, initial-scale=1">
     <title>Skull Kitties</title>
 
     <!-- Font -->
@@ -85,6 +85,26 @@
     <?php include 'components/section-welcome-carousel/section-welcome-carousel.js.php' ?>
     <?php include 'components/roadmap/roadmap.js.php' ?>
     <?php include 'components/buy-popup/buy-popup.js.php' ?>
+
+
+    <!-- Viewport Fix -->
+    <script>
+        (()=>{
+            const viewport = document.getElementById('<?= PREFIX ?>-viewport');
+
+            window.addEventListener('resize', function(){
+                if(screen.width < <?= MIN_WIDTH ?>){
+                    viewport.setAttribute('content', 'width=' + <?= MIN_WIDTH ?>);
+                }else{
+                    viewport.setAttribute('content',
+                        'width=device-width, initial-scale=1'
+                    )
+                }
+
+            })
+
+        })();
+    </script>
 </body>
 </html>
 
