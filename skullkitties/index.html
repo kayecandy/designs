@@ -62,8 +62,8 @@ button:not(.accordion-button){
     padding: 0.5rem 2rem;
     font-weight: 800;
     letter-spacing: 0.03em;
-    background-color: #555BB9;
-    color: white;
+    background-color: #D5A021;
+    color: #000000;
 
     cursor: pointer;
 
@@ -321,7 +321,7 @@ button.sk-disconnected-btn.mobile{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom left 45%;
-    padding-top: 46%;
+    padding-top: 36%;
     width: 100%;
     /* min-height: max(510px, 100vh); */
 
@@ -333,18 +333,27 @@ button.sk-disconnected-btn.mobile{
 
 }
 
+.section-header .adopt-now{
+    font-size: 1.75rem;
+    padding: 1.5rem 2rem;
+}
+
 @media only screen and (max-width: 1200px) {
 
     .section-header{
-        padding-top: 56%; 
+        padding-top: 46%; 
+    }
+
+    .section-header .adopt-now{
+        padding: 1rem 2rem;
     }
 }
 
 
 @media only screen and (max-width: 576px) {
     .section-header{
-        padding-top: 82%;
-        background-position: bottom left 39%;
+        padding-top: 72%;
+        background-position: bottom left 50%;
     }
 }
 
@@ -354,8 +363,8 @@ button.sk-disconnected-btn.mobile{
 
     .swiper-container .sk-welcome-swiper-img{
         width: 100%;
-        min-width: 400px;
-        max-width: 600px;
+        /* min-width: 400px;
+        max-width: 600px; */
         border-radius: 1rem;
     }
 </style>    <style>
@@ -670,7 +679,101 @@ body.roadmap::before{
     .section-faq .accordion-body a{
         font-weight: 600;
     }
+</style>    <style>
+
+.sk-footer-social{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    box-sizing: content-box;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.sk-footer-social svg{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.sk-footer-social:hover{
+    border-color: #D5A021}
+
+.sk-footer-social path{
+    transition: all 0.3s ease-in-out;
+}
+
+.sk-footer-social:hover path{
+    fill: #D5A021!important;
+}
+
+</style>    <style>
+
+.sk-buy-popup .modal-header .btn-close{
+    background-color: transparent;
+    position: absolute;
+    right: 0.6rem;
+    top: 0.6rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.sk-buy-popup .modal-content{
+    border-radius: 1rem;
+}
+
+.sk-buy-popup .modal-header{
+    border-bottom: none;
+}
+
+.sk-buy-popup .modal-footer{
+    border-top: none;
+}
+
+.sk-buy-popup-e{
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: black;
+    background: whitesmoke;
+    align-items: center;
+}
+
+.sk-buy-popup-quantity{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #f3f3f3;
+    border-radius: 4rem;
+    box-shadow: 0 0 2px #8c8c8c1f;
+    align-items: center;
+    color: black;
+}
+
+button.sk-buy-popup-quantity-btn{
+    background: white;
+    color: black;
+    border: 1px solid whitesmoke;
+    padding: 0;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px #bdbdbd;
+}
+
+
+
+
+@media only screen and (min-width: 576px){
+    .sk-buy-popup .modal-dialog{
+        max-width: 380px;
+    }
+}
 </style>
+
 </head>
 <body>
 
@@ -738,6 +841,8 @@ body.roadmap::before{
 
 </div>    
 <div id="header" class="section-container section-header pb-4 pb-lg-5">
+
+<button class="adopt-now" data-bs-toggle="modal" data-bs-target="#buy-popup">Mint Now</button>
 
 </div>    <div class="sk-bg-white pb-5">
     <div id="welcome"
@@ -817,7 +922,11 @@ body.roadmap::before{
             <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
                 The initial sale has sold out.To get your Bored Ape, checkout the collection on OpenSea.            </div>
             <div class="col-12 col-lg-3">
-                <button class="sk-buy-strip-text-button text-uppercase w-100">
+                <button 
+                    class="sk-buy-strip-text-button text-uppercase w-100"
+                    data-bs-toggle="modal" 
+                    data-bs-target="#buy-popup"
+                >
                     Mint Now                </button>
             </div>
         </div>
@@ -1073,99 +1182,67 @@ body.roadmap::before{
 
         <div class="sk-team-container row my-5 align-items-stretch">
 
-                            <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
-                    <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
-                            <img class="w-100 sk-team-member-img" src="./assets/nolol.png">
-                        </div>
-                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
-                            <h4 class="mb-0">Nolol</h4>
-                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Coding Ninja</p>
-                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Web Dev)</p>
-                        </div>
-    
-                        <div class="sk-team-socials d-none">
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/twitter.svg">
-                            </a>
-    
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/linkedin.svg">
-                            </a>
+                            <div class="col-12 col-lg-4 mb-3 px-lg-2 px-1">
+                    <div class="sk-team-card py-5 px-4 px-lg-2 px-xxl-5">
+                        <div class="d-flex d-lg-block">
+                            <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
+                                <img class="w-100 sk-team-member-img" src="./assets/nolol.png">
+                            </div>
+                            <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
+                                <h4 class="mb-0">Nolol</h4>
+                                <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Coding Ninja</p>
+                                <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Web Dev)</p>
+                            </div>
+
                         </div>
     
+                            
                     </div>
                 </div>
 
-                            <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
-                    <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
-                            <img class="w-100 sk-team-member-img" src="./assets/klecko.png">
-                        </div>
-                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
-                            <h4 class="mb-0">kleck0</h4>
-                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Master of Coin</p>
-                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Token Master)</p>
-                        </div>
-    
-                        <div class="sk-team-socials d-none">
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/twitter.svg">
-                            </a>
-    
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/linkedin.svg">
-                            </a>
+                            <div class="col-12 col-lg-4 mb-3 px-lg-2 px-1">
+                    <div class="sk-team-card py-5 px-4 px-lg-2 px-xxl-5">
+                        <div class="d-flex d-lg-block">
+                            <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
+                                <img class="w-100 sk-team-member-img" src="./assets/klecko.png">
+                            </div>
+                            <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
+                                <h4 class="mb-0">kleck0</h4>
+                                <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Master of Coin</p>
+                                <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Token Master)</p>
+                            </div>
+
                         </div>
     
+                                                    <div class="sk-team-socials text-center">
+
+                                                                    <a class="sk-team-social" target="_blank" href="https://twitter.com">
+                                        <img src="./assets/twitter.svg">
+                                    </a>
+                                
+                                                                
+                                
+                                                            </div>
+                        
+                            
                     </div>
                 </div>
 
-                            <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
-                    <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
-                            <img class="w-100 sk-team-member-img" src="./assets/k3vin.png">
-                        </div>
-                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
-                            <h4 class="mb-0">K3vin</h4>
-                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Collector of Bussiness</p>
-                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Biz Dev)</p>
-                        </div>
-    
-                        <div class="sk-team-socials d-none">
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/twitter.svg">
-                            </a>
-    
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/linkedin.svg">
-                            </a>
-                        </div>
-    
-                    </div>
-                </div>
+                            <div class="col-12 col-lg-4 mb-3 px-lg-2 px-1">
+                    <div class="sk-team-card py-5 px-4 px-lg-2 px-xxl-5">
+                        <div class="d-flex d-lg-block">
+                            <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
+                                <img class="w-100 sk-team-member-img" src="./assets/k3vin.png">
+                            </div>
+                            <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
+                                <h4 class="mb-0">K3vin</h4>
+                                <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Collector of Bussiness</p>
+                                <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Biz Dev)</p>
+                            </div>
 
-                            <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">
-                    <div class="sk-team-card d-flex d-lg-block py-5 px-4 px-lg-2 px-xxl-5">
-                        <div class="sk-team-img me-3 me-md-5 mx-lg-auto flex-shrink-0 col-3 col-lg-12">
-                            <img class="w-100 sk-team-member-img" src="./assets/0xvibe.png">
-                        </div>
-                        <div class="pt-4 d-flex d-lg-block flex-grow-1 flex-wrap flex-md-nowrap">
-                            <h4 class="mb-0">0xVibe</h4>
-                            <p class="mb-0 ms-auto ms-md-3 ms-lg-0">Dream Alchemist</p>
-                            <p class="mb-0 ms-auto col-12 col-md-auto text-end text-md-center">(Game Dev)</p>
                         </div>
     
-                        <div class="sk-team-socials d-none">
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/twitter.svg">
-                            </a>
-    
-                            <a class="sk-team-social" href="#">
-                                <img src="./assets/linkedin.svg">
-                            </a>
-                        </div>
-    
+                            
                     </div>
                 </div>
 
@@ -1360,7 +1437,253 @@ body.roadmap::before{
     </div>
 </div>
 
-    
+    <footer class="sk-bg-white py-4">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                                    <a class="sk-footer-social p-2 me-1" href="https://twitter.com" target="_blank">
+                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="20"
+   viewBox="0 0 24 20"
+   fill="none"
+   version="1.1"
+   id="svg1428"
+   sodipodi:docname="twitter-white.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+  <metadata
+     id="metadata1434">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1432" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="773"
+     id="namedview1430"
+     showgrid="false"
+     inkscape:zoom="28.25"
+     inkscape:cx="12"
+     inkscape:cy="10"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1428" />
+  <path
+     d="M21.5156 5.125C22.4531 4.42188 23.2969 3.57812 23.9531 2.59375C23.1094 2.96875 22.125 3.25 21.1406 3.34375C22.1719 2.73438 22.9219 1.79688 23.2969 0.625C22.3594 1.1875 21.2812 1.60938 20.2031 1.84375C19.2656 0.859375 18 0.296875 16.5938 0.296875C13.875 0.296875 11.6719 2.5 11.6719 5.21875C11.6719 5.59375 11.7188 5.96875 11.8125 6.34375C7.73438 6.10938 4.07812 4.14062 1.64062 1.1875C1.21875 1.89062 0.984375 2.73438 0.984375 3.67188C0.984375 5.35938 1.82812 6.85938 3.1875 7.75C2.39062 7.70312 1.59375 7.51562 0.9375 7.14062V7.1875C0.9375 9.57812 2.625 11.5469 4.875 12.0156C4.5 12.1094 4.03125 12.2031 3.60938 12.2031C3.28125 12.2031 3 12.1562 2.67188 12.1094C3.28125 14.0781 5.10938 15.4844 7.26562 15.5312C5.57812 16.8438 3.46875 17.6406 1.17188 17.6406C0.75 17.6406 0.375 17.5938 0 17.5469C2.15625 18.9531 4.73438 19.75 7.54688 19.75C16.5938 19.75 21.5156 12.2969 21.5156 5.78125C21.5156 5.54688 21.5156 5.35938 21.5156 5.125Z"
+     fill="#53AEF9"
+     id="path1426"
+     style="fill:#ffffff" />
+</svg>
+                    </a>
+                    
+                                    <a class="sk-footer-social p-2 me-1" href="https://facebook.com" target="_blank">
+                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 30 30"
+   enable-background="new 0 0 30 30"
+   xml:space="preserve"
+   sodipodi:docname="facebook-white.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"><metadata
+   id="metadata841"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs839" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1440"
+   inkscape:window-height="773"
+   id="namedview837"
+   showgrid="false"
+   inkscape:zoom="19.766667"
+   inkscape:cx="15"
+   inkscape:cy="15"
+   inkscape:window-x="0"
+   inkscape:window-y="25"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<path
+   id="circle833"
+   d="M 14.886719 0 A 15 15 0 0 0 0 15 A 15 15 0 0 0 15 30 A 15 15 0 0 0 30 15 A 15 15 0 0 0 15 0 A 15 15 0 0 0 14.886719 0 z M 17.300781 6.0996094 C 18.400781 6.0996094 19.399219 6.1992188 19.699219 6.1992188 L 19.699219 9.0996094 L 18 9.0996094 C 16.7 9.0996094 16.400391 9.6996094 16.400391 10.599609 L 16.400391 12.599609 L 19.5 12.599609 L 19.099609 15.800781 L 16.400391 15.800781 L 16.400391 23.900391 L 13.199219 23.900391 L 13.199219 15.800781 L 10.5 15.800781 L 10.5 12.599609 L 13.199219 12.599609 L 13.199219 10.300781 C 13.199219 7.6007812 14.900781 6.0996094 17.300781 6.0996094 z "
+   style="fill:#ffffff" />
+
+</svg>
+                    </a>
+                    
+                                    <a class="sk-footer-social p-2 me-1" href="https://instagram.com" target="_blank">
+                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256px"
+   height="256px"
+   viewBox="0 0 256 256"
+   version="1.1"
+   preserveAspectRatio="xMidYMid"
+   id="svg849"
+   sodipodi:docname="instagram-white.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+  <metadata
+     id="metadata855">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs853" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="773"
+     id="namedview851"
+     showgrid="false"
+     inkscape:zoom="2.3164062"
+     inkscape:cx="128"
+     inkscape:cy="128"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g847" />
+  <g
+     id="g847">
+    <path
+       d="m 127.99975,23.06353 c 34.17763,0 38.22564,0.130073 51.72273,0.745886 12.47987,0.569577 19.25737,2.654806 23.76826,4.407232 5.9742,2.322002 10.23865,5.096211 14.71753,9.575084 4.47887,4.478873 7.25308,8.74333 9.57457,14.717532 1.75294,4.510883 3.83817,11.288386 4.40774,23.767752 0.61582,13.497592 0.74589,17.545599 0.74589,51.723234 0,34.17764 -0.13007,38.22565 -0.74589,51.72273 -0.56957,12.47988 -2.6548,19.25738 -4.40774,23.76826 -2.32149,5.97421 -5.0957,10.23866 -9.57457,14.71754 -4.47888,4.47887 -8.74333,7.25308 -14.71753,9.57457 -4.51089,1.75294 -11.28839,3.83817 -23.76826,4.40774 -13.49506,0.61581 -17.54306,0.74589 -51.72273,0.74589 -34.179676,0 -38.227683,-0.13008 -51.722734,-0.74589 -12.479874,-0.56957 -19.257377,-2.6548 -23.767752,-4.40774 -5.97471,-2.32149 -10.239167,-5.0957 -14.71804,-9.57457 -4.478874,-4.47888 -7.253082,-8.74333 -9.574576,-14.71754 -1.752934,-4.51088 -3.838164,-11.28838 -4.40774,-23.76775 -0.615813,-13.49759 -0.745886,-17.5456 -0.745886,-51.72324 0,-34.177635 0.130073,-38.225642 0.745886,-51.722726 0.569576,-12.479874 2.654806,-19.257377 4.40774,-23.76826 2.321494,-5.974202 5.095702,-10.238659 9.574576,-14.717532 4.478873,-4.478873 8.74333,-7.253082 14.71804,-9.575084 4.510375,-1.752426 11.287878,-3.837655 23.767244,-4.407232 C 89.774099,23.193603 93.822107,23.06353 127.99975,23.06353 M 127.99975,0 C 93.236779,0 88.878325,0.14734807 75.225764,0.77027475 61.601148,1.3921852 52.296879,3.5556614 44.154628,6.7200883 35.737497,9.9912155 28.599245,14.367961 21.483349,21.483857 14.367453,28.599753 9.9907074,35.738005 6.7195802,44.155136 3.5551533,52.297387 1.3916771,61.601656 0.76976665,75.226272 0.14683998,88.878325 0,93.237287 0,128.00025 c 0,34.76297 0.14683998,39.12193 0.76976665,52.77399 0.62191045,13.62461 2.78538665,22.92888 5.94981355,31.07113 3.2711272,8.41663 7.6478728,15.55538 14.7637688,22.67128 7.115896,7.1159 14.254148,11.49264 22.671279,14.76377 8.142251,3.16443 17.44652,5.3279 31.071136,5.94981 C 88.878325,255.85316 93.236779,256 127.99975,256 c 34.76296,0 39.12192,-0.14684 52.77398,-0.76977 13.62461,-0.62191 22.92888,-2.78538 31.07113,-5.94981 8.41714,-3.27113 15.55539,-7.64787 22.67128,-14.76377 7.1159,-7.1159 11.49264,-14.25415 14.76377,-22.67128 3.16443,-8.14225 5.3279,-17.44652 5.94981,-31.07113 C 255.85265,167.12218 256,162.76322 256,128.00025 256,93.237287 255.85265,88.878325 255.22972,75.226272 254.60781,61.601656 252.44434,52.297387 249.27991,44.155136 246.00878,35.738005 241.63204,28.599753 234.51614,21.483857 227.40025,14.367961 220.262,9.9912155 211.84486,6.7200883 203.70261,3.5556614 194.39834,1.3921852 180.77373,0.77027475 167.12167,0.14734807 162.76271,0 127.99975,0 Z m 0,62.270311 c -36.301488,0 -65.729947,29.428459 -65.729947,65.729939 0,36.30149 29.428459,65.72995 65.729947,65.72995 36.30148,0 65.72994,-29.42846 65.72994,-65.72995 0,-36.30148 -29.42846,-65.729939 -65.72994,-65.729939 z m 0,108.396859 c -23.56401,0 -42.666925,-19.10291 -42.666925,-42.66692 0,-23.564 19.102915,-42.666917 42.666925,-42.666917 23.564,0 42.66692,19.102917 42.66692,42.666917 0,23.56401 -19.10292,42.66692 -42.66692,42.66692 z M 211.68634,59.673429 c 0,8.483184 -6.87659,15.360274 -15.35977,15.360274 -8.48318,0 -15.36027,-6.87709 -15.36027,-15.360274 0,-8.483185 6.87709,-15.359767 15.36027,-15.359767 8.48318,0 15.35977,6.876582 15.35977,15.359767 z"
+       fill="#0a0a08"
+       id="path845"
+       style="fill:#ffffff" />
+  </g>
+</svg>
+                    </a>
+                    
+                                    <a class="sk-footer-social p-2 me-1" href="https://discord.com" target="_blank">
+                        <svg width="71" height="55" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z" fill="#ffffff"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="71" height="55" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    </a>
+                    
+                            </div>
+
+            <div class="col-auto" style="justify-self: flex-end; font-weight: 700">
+                    2021 Skull Kitties, LLC            </div>
+        </div>
+    </div>
+</footer>    <!-- Modal -->
+<div class="modal fade sk-buy-popup" id="buy-popup" tabindex="-1" aria-labelledby="buy-popupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header p-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="sk-buy-popup-e px-4 py-5">
+                    <img style="height: 1.5rem" class="me-2" src="assets/icon-adopt.svg">
+                    <div id="sk-buy-popup-price" data-baseprice="0.05">0.05</div>
+                </div>
+
+                <div id="sk-buy-popup-quantity" class="sk-buy-popup-quantity py-4 mt-3" data-max="20" data-min="1">
+                    <div>
+                        <button 
+                        id="sk-buy-popup-quantity-btn-minus"
+                        class="sk-buy-popup-quantity-btn">
+                            -
+                        </button>
+                    </div>
+                    <div class="px-3">
+                        <div class="text-uppercase" style="font-size: 0.7rem;">
+                            Quantity
+                        </div>
+                        <div class="text-center">
+                            <h5 id="sk-buy-popup-quantity-value">1</h5>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button 
+                        id="sk-buy-popup-quantity-btn-plus"
+                        class="sk-buy-popup-quantity-btn">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center pt-1">
+                <button type="button" class="btn btn-yellow w-100" data-bs-dismiss="modal">Confirm</button>
+
+                <hr>
+                <div>
+                    <small>
+                        XXX Remaining
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -1473,6 +1796,34 @@ body.roadmap::before{
 })();
 
 
+</script>    <script>
+    (()=>{
+        const domAdoptQuantity = document.getElementById("sk-buy-popup-quantity");
+        const domAdoptQuantityMinus = document.getElementById('sk-buy-popup-quantity-btn-minus');
+        const domAdoptQuantityPlus = document.getElementById('sk-buy-popup-quantity-btn-plus');
+        const domAdoptQuantityValue = document.getElementById('sk-buy-popup-quantity-value');
+        const domAdoptPrice = document.getElementById('sk-buy-popup-price');
+
+
+        function updateAdoptQuantityValue(delta){
+            const value = parseInt(domAdoptQuantityValue.innerText) + delta;
+
+            if(value >= domAdoptQuantity.dataset.min && value <= domAdoptQuantity.dataset.max){
+                domAdoptQuantityValue.innerText = value;
+
+                domAdoptPrice.innerText = (domAdoptPrice.dataset.baseprice * value).toFixed(2);
+            }
+
+        }
+
+        domAdoptQuantityMinus.addEventListener('click', function(){
+            updateAdoptQuantityValue(-1);
+        })
+
+        domAdoptQuantityPlus.addEventListener('click', function(){
+            updateAdoptQuantityValue(1);
+        })
+    })();
 </script></body>
 </html>
 

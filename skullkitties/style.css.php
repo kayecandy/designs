@@ -30,8 +30,8 @@ button:not(.accordion-button){
     padding: 0.5rem 2rem;
     font-weight: 800;
     letter-spacing: 0.03em;
-    background-color: #555BB9;
-    color: white;
+    background-color: <?= COLORS[1] ?>;
+    color: <?= COLORS[0] ?>;
 
     cursor: pointer;
 

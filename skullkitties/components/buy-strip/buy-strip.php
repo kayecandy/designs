@@ -8,7 +8,11 @@
                 <?= BUY_STRIP_CONTENTS['text-center'] ?>
             </div>
             <div class="col-12 col-lg-3">
-                <button class="<?= PREFIX ?>-<?= BUY_STRIP_CONTENTS['id'] ?>-text-button text-uppercase w-100">
+                <button 
+                    class="<?= PREFIX ?>-<?= BUY_STRIP_CONTENTS['id'] ?>-text-button text-uppercase w-100"
+                    data-bs-toggle="modal" 
+                    data-bs-target="#<?= BUY_STRIP_CONTENTS['buttonModal'] ?>"
+                >
                     <?= BUY_STRIP_CONTENTS['text-button'] ?>
                 </button>
             </div>

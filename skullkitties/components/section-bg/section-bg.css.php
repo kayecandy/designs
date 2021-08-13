@@ -28,7 +28,7 @@
 @media only screen and (max-width: 576px) {
     .section-<?= SECTION_BG_CONTENTS['id'] ?>{
         padding-top: 82%;
-        background-position: bottom left 39%;
+        background-position: bottom left 50%;
     }
 }
 

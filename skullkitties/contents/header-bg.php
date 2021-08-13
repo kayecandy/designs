@@ -2,7 +2,10 @@
 
     const HEADER_BG_CONTENTS = [
         'id'                => 'header',
-        'backgroundImg'     => './assets/bg.png'
+        'backgroundImg'     => './assets/bg.png',
+
+        'buttonModal'       => 'buy-popup',
+        'buttonText'        => 'Mint Now'
     ];
 
 ?>

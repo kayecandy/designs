@@ -5,7 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom left 45%;
-    padding-top: 46%;
+    padding-top: 36%;
     width: 100%;
     /* min-height: max(510px, 100vh); */
 
@@ -17,18 +17,27 @@
 
 }
 
+.section-<?= HEADER_BG_CONTENTS['id'] ?> .adopt-now{
+    font-size: 1.75rem;
+    padding: 1.5rem 2rem;
+}
+
 @media only screen and (max-width: 1200px) {
 
     .section-<?= HEADER_BG_CONTENTS['id'] ?>{
-        padding-top: 56%; 
+        padding-top: 46%; 
+    }
+
+    .section-<?= HEADER_BG_CONTENTS['id'] ?> .adopt-now{
+        padding: 1rem 2rem;
     }
 }
 
 
 @media only screen and (max-width: 576px) {
     .section-<?= HEADER_BG_CONTENTS['id'] ?>{
-        padding-top: 82%;
-        background-position: bottom left 39%;
+        padding-top: 72%;
+        background-position: bottom left 50%;
     }
 }
 

@@ -11,7 +11,8 @@
 
 
         'buttonBg'      => 'black',
-        'buttonColor'   => COLORS[1]
+        'buttonColor'   => COLORS[1],
+        'buttonModal'   => 'buy-popup'
     ];
 
 ?>

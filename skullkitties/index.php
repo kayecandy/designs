@@ -13,6 +13,8 @@
     include 'contents/roadmap.php';
     include 'contents/team.php';
     include 'contents/faqs.php';
+    include 'contents/footer.php';
+    include 'contents/buy-popup.php';
 
 ?>
 
@@ -49,6 +51,9 @@
     <?php include 'components/roadmap/roadmap.css.php' ?>
     <?php include 'components/team-2/team-2.css.php' ?>
     <?php include 'components/faqs/faqs.css.php' ?>
+    <?php include 'components/footer/footer.css.php' ?>
+    <?php include 'components/buy-popup/buy-popup.css.php' ?>
+
 
 </head>
 <body>
@@ -62,6 +67,8 @@
     <?php include 'components/roadmap/roadmap.php' ?>
     <?php include 'components/team-2/team-2.php' ?>
     <?php include 'components/faqs/faqs.php' ?>
+    <?php include 'components/footer/footer.php' ?>
+    <?php include 'components/buy-popup/buy-popup.php' ?>
     
 
     <!-- Bootstrap -->
@@ -77,6 +84,7 @@
     <?php include 'components/menu/menu.js.php' ?>
     <?php include 'components/section-welcome-carousel/section-welcome-carousel.js.php' ?>
     <?php include 'components/roadmap/roadmap.js.php' ?>
+    <?php include 'components/buy-popup/buy-popup.js.php' ?>
 </body>
 </html>
 
