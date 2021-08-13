@@ -15,24 +15,40 @@
         'items'             => [
             [
                 'question'  => 'What wallets do you support?',
-                'answer'    => 'faq_answer1'
+                'answer'    => 'The Skull Kitty website is compatible with Metamask. You can download the Metamask browser extension <a href="https://metamask.io/download" target="_blank">here.</a>',
+                'type'      => 'text'
             ],
             [
-                'question'  => 'What is the process of adopting a Junglee?',
-                'answer'    => 'faq_answer2'
+                'question'  => 'How many Skull kitties are there in the collection?',
+                'answer'    => 'There are 9999 unique Skull Kitties in the collection.',
+                'type'      => 'text'
             ],
             [
-                'question'  => 'How many Junglees are up for adoption?',
-                'answer'    => 'faq_answer3'
+                'question'  => 'What will the price be per mint?',
+                'answer'    => 'All Skull  Kitties are priced at 0.02 ETH.',
+                'type'      => 'text'
             ],
             [
-                'question'  => 'How many Junglees can I adopt in one transaction?',
-                'answer'    => 'faq_answer4'
+                'question'  => 'How many Skull Kitties can I mint per transaction?',
+                'answer'    => 'You can mint a maximum of 20 Skull Kitties per trasaction.',
+                'type'      => 'text'
             ],
             [
-                'question'  => 'Can I trade my Junglee?',
-                'answer'    => 'faq_answer5'
-            ]
+                'question'  => 'How are Skull Kitties generated?',
+                'answer'    => 'Skull Kitties are programatically generated at random from over 250 unique combinations.',
+                'type'      => 'text'
+            ],
+            [
+                'question'  => 'I have a Yellow Punk, Do I get a free Skull Kitty?',
+                'answer'    => 'Yes, all Yellow Punks owners can claim a Free Skull Kitty per wallet. We wouldn’t be where we are without your support ❤️',
+                'type'      => 'text'
+            ],
+            [
+                'question'  => 'What’s up with your Smart Contract?',
+                'answer'    => 'Our smart contract follows the OpenZeppelin Standards for ERC721, it is a simple and elegant NFT contract perfect for the Skull Kitties, we are also making sure that all our metadata is uploaded to IPFS to create NFTs that technically lasts forever.',
+                'type'      => 'text'
+            ],
+            
         ]
     ];
 ?>

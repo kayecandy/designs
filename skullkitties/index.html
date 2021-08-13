@@ -24,6 +24,7 @@
 
     <!-- Font -->
     <link href="./assets/fonts/carmen-sans/style.css" rel="stylesheet">
+    <link href="./assets/fonts/coconut-house/style.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -37,6 +38,18 @@
 html, body{
 /* min-width: 320px; */
 }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Coconut House', sans-serif;;
+}
+
+
 
 body{
     color:white;
@@ -100,7 +113,7 @@ button.btn-yellow{
 /* Section General Style */
 .section-container{
     /* min-height: 100vh; */
-    padding-top: 6rem;
+    padding-top: 3rem;
     /* padding-bottom: 3rem; */
     position: relative;
 }
@@ -197,6 +210,8 @@ button.sk-disconnected-btn{
     align-items: center;
 
     transition: all 0.5s ease-in-out;
+
+    border: 1px solid;
 }
 
 .sk-disconnected-btn::before{
@@ -327,7 +342,7 @@ button.sk-disconnected-btn.mobile{
 
 </style>    <style>
 
-.section-mint{
+.section-home{
     background-image: url("./assets/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -344,25 +359,25 @@ button.sk-disconnected-btn.mobile{
 
 }
 
-.section-mint .adopt-now{
+.section-home .adopt-now{
     font-size: 1.75rem;
     padding: 1.5rem 2rem;
 }
 
 @media only screen and (max-width: 1200px) {
 
-    .section-mint{
+    .section-home{
         padding-top: 46%; 
     }
 
-    .section-mint .adopt-now{
+    .section-home .adopt-now{
         padding: 1rem 2rem;
     }
 }
 
 
 @media only screen and (max-width: 576px) {
-    .section-mint{
+    .section-home{
         padding-top: 72%;
         background-position: bottom left 50%;
     }
@@ -380,20 +395,21 @@ button.sk-disconnected-btn.mobile{
     }
 </style>    <style>
 
-    .section-buy-strip{
-        background: #fad220    }
+    .section-mint{
+        background: #D5A021    }
 
-    .section-buy-strip .row-buy-strip{
+    .section-mint .row-mint{
         background: #D5A021;
         color: black;
     }
-    .section-buy-strip .sk-buy-strip-text-left{
+    .section-mint .sk-mint-text-left{
         font-weight: 900;
-        font-style: italic;
+        /* font-style: italic; */
+        /* font-size: rem; */
     }
 
 
-    .section-buy-strip .sk-buy-strip-text-button{
+    .section-mint .sk-mint-text-button{
         background: black;
         color: #D5A021;
     }
@@ -814,6 +830,14 @@ button.sk-buy-popup-quantity-btn{
 
 
             
+                <div class="sk-header-item"><a href="./#home">
+                    Home                </a></div>
+
+            
+                <div class="sk-header-item"><a href="./#mint">
+                    Mint                </a></div>
+
+            
                 <div class="sk-header-item"><a href="./#roadmap">
                     Roadmap                </a></div>
 
@@ -823,11 +847,7 @@ button.sk-buy-popup-quantity-btn{
 
             
                 <div class="sk-header-item"><a href="./#faq">
-                    FAQ                </a></div>
-
-            
-                <div class="sk-header-item"><a href="#mint">
-                    Mint                </a></div>
+                    FAQs                </a></div>
 
                         
         </div>
@@ -841,24 +861,25 @@ button.sk-buy-popup-quantity-btn{
     </div>
 
 </div>    
-<div id="mint" class="section-container section-mint pb-4 pb-lg-5">
+<div id="home" class="section-container section-home pb-4 pb-lg-5">
 
 <button class="adopt-now" data-bs-toggle="modal" data-bs-target="#buy-popup">Mint Now</button>
 
 </div>    <div class="sk-bg-white pb-5">
     <div id="welcome"
-        class="container section-container section-welcome text-center pb-5">
+        class="container section-container section-welcome text-center pb-5 pt-5">
 
         <div>
-            <div class="welcome-text text-uppercase" style="font-size: 1.5rem;">Welcome to the</div>
+            <div class="welcome-text text-uppercase" style="font-size: 1.5rem;">Introducing</div>
 
                         <h1                class="sk-welcome-title-text"
                 style="font-weight: 800; font-size: 4rem">
                 Skull Kitties            </h1>
                     </div>
+        
 
         <div class="sk-about-text my-5">
-            A collection of 6666 unique kitties raised from hell. They are programmatically generated from over 300K total possible options and are currently living their 9th life on the Etherium Blockchain.<br><br><br>Launching on Friday the 13th (8/13)        </div>
+            A collection of 9999 unique kitties raised from hell. They are programmatically generated from over 250K total possible options and are currently living their 9th life on the Ethereum Blockchain.        </div>
 
     </div>
 
@@ -914,17 +935,17 @@ button.sk-buy-popup-quantity-btn{
 
 
 
-    <div id="buy-strip" class="section-buy-strip px-5 py-4 py-xl-5">
+    <div id="mint" class="section-mint px-5 py-4 py-xl-5">
     <div class="container-xl">
-        <div class="row row-buy-strip p-3 px-4 align-items-center justify-content-between mx-xl-4">
+        <div class="row row-mint p-3 px-4 align-items-center justify-content-between mx-xl-4">
             <div class="col-12 col-lg-3">
-                <h3 class="text-uppercase sk-buy-strip-text-left mb-4 mb-lg-0 text-sm-nowrap text-center text-lg-start">Buy a Skull Kitty</h3>
+                <h2 class="text-uppercase sk-mint-text-left mb-4 mb-lg-0 text-sm-nowrap text-center text-lg-start">Buy a Skull Kitty</h2>
             </div>
             <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
-                The initial sale has sold out.To get your Bored Ape, checkout the collection on OpenSea.            </div>
+                <img src="./assets/icon-adopt-black.svg" height="20" class="me-2 align-middle"><span style="font-size: 1.2rem;font-weight: 800">0.02ETH</span>            </div>
             <div class="col-12 col-lg-3">
                 <button 
-                    class="sk-buy-strip-text-button text-uppercase w-100"
+                    class="sk-mint-text-button text-uppercase w-100"
                     data-bs-toggle="modal" 
                     data-bs-target="#buy-popup"
                 >
@@ -967,7 +988,7 @@ button.sk-buy-popup-quantity-btn{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
                         <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
-                            <h5 class="mb-0"><span style="font-weight: 800">25% Sold:</span> 10 Skull Kitties Airdropped</h5>
+                            <h5 class="mb-0"><h4 style="font-weight: 800">25% Sold:</h4> 10 Skull Kitties Airdropped</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                                             </ul>
                         </div>
@@ -998,7 +1019,7 @@ button.sk-buy-popup-quantity-btn{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5 text-md-end pe-md-4 ps-md-0 ps-4">
                         <div class="sk-timeline-card ms-lg-5 p-4 p-xl-5 text-md-start">
-                            <h5 class="mb-0"><span style="font-weight: 800">50% Sold:</span> Skull Kitties Meme Challenge (1 ETH Pool)</h5>
+                            <h5 class="mb-0"><h4 style="font-weight: 800">50% Sold:</h4> Skull Kitties Meme Challenge (1 ETH Pool)</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                                             </ul>
                         </div>
@@ -1029,7 +1050,7 @@ button.sk-buy-popup-quantity-btn{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
                         <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
-                            <h5 class="mb-0"><span style="font-weight: 800">65% Sold:</span> Skull Kitties Art Challenge (2 ETH Pool)</h5>
+                            <h5 class="mb-0"><h4 style="font-weight: 800">65% Sold:</h4> Skull Kitties Art Challenge (2 ETH Pool)</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                                             </ul>
                         </div>
@@ -1060,7 +1081,7 @@ button.sk-buy-popup-quantity-btn{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5 text-md-end pe-md-4 ps-md-0 ps-4">
                         <div class="sk-timeline-card ms-lg-5 p-4 p-xl-5 text-md-start">
-                            <h5 class="mb-0"><span style="font-weight: 800">75% Sold:</span> Skull Kitties Merch Store Launched</h5>
+                            <h5 class="mb-0"><h4 style="font-weight: 800">75% Sold:</h4> Skull Kitties Merch Store Launched</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                                             </ul>
                         </div>
@@ -1091,7 +1112,7 @@ button.sk-buy-popup-quantity-btn{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
                         <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
-                            <h5 class="mb-0"><span style="font-weight: 800">85% Sold:</span> Monthly Skull Kitties NFT Airdrops</h5>
+                            <h5 class="mb-0"><h4 style="font-weight: 800">85% Sold:</h4> Monthly Skull Kitties NFT Airdrops</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                                             </ul>
                         </div>
@@ -1122,7 +1143,7 @@ button.sk-buy-popup-quantity-btn{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5 text-md-end pe-md-4 ps-md-0 ps-4">
                         <div class="sk-timeline-card ms-lg-5 p-4 p-xl-5 text-md-start">
-                            <h5 class="mb-0"><span style="font-weight: 800">100% Sold:</span> 10 ETH Added to the Community Wallet</h5>
+                            <h5 class="mb-0"><h4 style="font-weight: 800">100% Sold:</h4> 10 ETH Added to the Community Wallet</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                                             </ul>
                         </div>
@@ -1153,7 +1174,7 @@ button.sk-buy-popup-quantity-btn{
                 <div class="sk-timeline-item">
                     <div class="sk-bg-white  px-md-3 px-xl-5  ps-4">
                         <div class="sk-timeline-card me-lg-5 p-4 p-xl-5 ">
-                            <h5 class="mb-0"><span style="font-weight: 800">Post Sell Out:</span> Gamification Strategies implemented to drive value to the community</h5>
+                            <h5 class="mb-0"><h4 style="font-weight: 800">Post Sell Out:</h4> Community and value oriented strategies implemented.</h5>
                             <ul class="mb-0 ps-3 ps-lg-4">
                                                             </ul>
                         </div>
@@ -1175,13 +1196,13 @@ button.sk-buy-popup-quantity-btn{
 </div>    <div class="sk-bg-white">
     <div id="team" class="container section-container section-team text-center pb-5">
 
-        <h5 style="font-weight: normal;">The</h5>
+        <div style="font-weight: normal;">The</div>
                     <h1                class="sk-team-title-text"
             >
                 Team            </h1>
         
 
-        <div class="sk-team-container row my-5 align-items-stretch">
+        <div class="sk-team-container row mt-5 align-items-stretch">
 
                             <div class="col-12 col-lg-4 mb-3 px-lg-2 px-1">
                     <div class="sk-team-card py-5 px-4 px-lg-2 px-xxl-5">
@@ -1254,7 +1275,7 @@ button.sk-buy-popup-quantity-btn{
     </div> <!-- team-container -->
 </div> <!-- bg-white -->    <div class="sk-bg-white">
     <div id="faq" class="container section-container section-faq" style="padding-bottom: 6rem;">
-        <h5 style="font-weight: normal;">Still have doubts? Check our </h5>
+        <div style="font-weight: normal;">Still have doubts? Check our </div>
 
                     <h1 class="sk-faq-title-text mb-5">
                 FAQs            </h1>
@@ -1276,13 +1297,8 @@ button.sk-buy-popup-quantity-btn{
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
-                                
-    The Jungleverse website is compatible with Metamask. You can download the Metamask browser extension <a href="https://metamask.io/download">here</a>
+                                                    The Skull Kitty website is compatible with Metamask. You can download the Metamask browser extension <a href="https://metamask.io/download" target="_blank">here.</a>                        
 
-    
-    The Jungleverse website is compatible with Metamask. You can download the Metamask browser extension <a href="https://metamask.io/download">here</a>
-
-    
                         </div>
                     </div>
                 </div>
@@ -1294,67 +1310,14 @@ button.sk-buy-popup-quantity-btn{
                             data-bs-target="#flush-collapse-1" aria-expanded="false"
                             aria-controls="flush-collapse-1">
                             
-                            What is the process of adopting a Junglee?                        </button>
+                            How many Skull kitties are there in the collection?                        </button>
                     </h2>
                     <div id="flush-collapse-1" class="accordion-collapse collapse" aria-labelledby="flush-heading-1"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
-                                
-        <div>
-            ● Get the MetaMask extension for Google Chrome.
-        </div>
+                                                    There are 9999 unique Skull Kitties in the collection.                        
 
-        <div>
-            ● Load it with ETH. You can also buy through services that allow you to change your
-            money
-            (fiat) to ETH like Coinbase, RobinHood, Rainbow, or Paypal, and then send to your
-            MetaMask
-            wallet.
-        </div>
-
-        <div>
-            ● Finally, click the button that says “Connect your Wallet” to allow our site to
-            register
-            you with your address
-        </div>
-
-        <div>
-            ● Then set a quantity and click adopt on this site. Once you have approved your purchase
-            on
-            Metamask, give it some time for the transaction to go through, And Voila! You have
-            adopted
-            your own Junglee!
-        </div>
-
-    
-        <div>
-            ● Get the MetaMask extension for Google Chrome.
-        </div>
-
-        <div>
-            ● Load it with ETH. You can also buy through services that allow you to change your
-            money
-            (fiat) to ETH like Coinbase, RobinHood, Rainbow, or Paypal, and then send to your
-            MetaMask
-            wallet.
-        </div>
-
-        <div>
-            ● Finally, click the button that says “Connect your Wallet” to allow our site to
-            register
-            you with your address
-        </div>
-
-        <div>
-            ● Then set a quantity and click adopt on this site. Once you have approved your purchase
-            on
-            Metamask, give it some time for the transaction to go through, And Voila! You have
-            adopted
-            your own Junglee!
-        </div>
-
-    
                         </div>
                     </div>
                 </div>
@@ -1366,19 +1329,14 @@ button.sk-buy-popup-quantity-btn{
                             data-bs-target="#flush-collapse-2" aria-expanded="false"
                             aria-controls="flush-collapse-2">
                             
-                            How many Junglees are up for adoption?                        </button>
+                            What will the price be per mint?                        </button>
                     </h2>
                     <div id="flush-collapse-2" class="accordion-collapse collapse" aria-labelledby="flush-heading-2"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
-                                
-    There are a total of 10,000 Junglees that are up for adoption.
+                                                    All Skull  Kitties are priced at 0.02 ETH.                        
 
-    
-    There are a total of 10,000 Junglees that are up for adoption.
-
-    
                         </div>
                     </div>
                 </div>
@@ -1390,19 +1348,14 @@ button.sk-buy-popup-quantity-btn{
                             data-bs-target="#flush-collapse-3" aria-expanded="false"
                             aria-controls="flush-collapse-3">
                             
-                            How many Junglees can I adopt in one transaction?                        </button>
+                            How many Skull Kitties can I mint per transaction?                        </button>
                     </h2>
                     <div id="flush-collapse-3" class="accordion-collapse collapse" aria-labelledby="flush-heading-3"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
-                                
-    You can adopt upto 20 Junglees/ transaction
+                                                    You can mint a maximum of 20 Skull Kitties per trasaction.                        
 
-    
-    You can adopt upto 20 Junglees/ transaction
-
-    
                         </div>
                     </div>
                 </div>
@@ -1414,19 +1367,52 @@ button.sk-buy-popup-quantity-btn{
                             data-bs-target="#flush-collapse-4" aria-expanded="false"
                             aria-controls="flush-collapse-4">
                             
-                            Can I trade my Junglee?                        </button>
+                            How are Skull Kitties generated?                        </button>
                     </h2>
                     <div id="flush-collapse-4" class="accordion-collapse collapse" aria-labelledby="flush-heading-4"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
-                                
-    Yes, Junglees can be traded on OpenSea.io. In the future, you can directly trade your Junglees on the Jungleverse Marketplace. 
+                                                    Skull Kitties are programatically generated at random from over 250 unique combinations.                        
 
-    
-    Yes, Junglees can be traded on OpenSea.io. In the future, you can directly trade your Junglees on the Jungleverse Marketplace. 
+                        </div>
+                    </div>
+                </div>
 
-    
+                            
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-5" aria-expanded="false"
+                            aria-controls="flush-collapse-5">
+                            
+                            I have a Yellow Punk, Do I get a free Skull Kitty?                        </button>
+                    </h2>
+                    <div id="flush-collapse-5" class="accordion-collapse collapse" aria-labelledby="flush-heading-5"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+
+                                                    Yes, all Yellow Punks owners can claim a Free Skull Kitty per wallet. We wouldn’t be where we are without your support ❤️                        
+
+                        </div>
+                    </div>
+                </div>
+
+                            
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-6" aria-expanded="false"
+                            aria-controls="flush-collapse-6">
+                            
+                            What’s up with your Smart Contract?                        </button>
+                    </h2>
+                    <div id="flush-collapse-6" class="accordion-collapse collapse" aria-labelledby="flush-heading-6"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+
+                                                    Our smart contract follows the OpenZeppelin Standards for ERC721, it is a simple and elegant NFT contract perfect for the Skull Kitties, we are also making sure that all our metadata is uploaded to IPFS to create NFTs that technically lasts forever.                        
+
                         </div>
                     </div>
                 </div>

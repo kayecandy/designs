@@ -12,7 +12,7 @@
         <?php endif; ?>
 
 
-        <div class="<?= PREFIX ?>-<?= TEAM_CONTENTS['id'] ?>-container row my-5 align-items-stretch">
+        <div class="<?= PREFIX ?>-<?= TEAM_CONTENTS['id'] ?>-container row mt-5 align-items-stretch">
 
             <?php foreach (TEAM_CONTENTS['members'] as $teamMember): ?>
                 <div class="col-12 col-lg-3 mb-3 px-lg-2 px-1">

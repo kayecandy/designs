@@ -1,9 +1,9 @@
 <div class="<?= PREFIX ?>-bg-white pb-5">
     <div id="<?= SECTION_WELCOME_CONTENTS['id'] ?>"
-        class="container section-container section-<?= SECTION_WELCOME_CONTENTS['id'] ?> text-center pb-5">
+        class="container section-container section-<?= SECTION_WELCOME_CONTENTS['id'] ?> text-center pb-5 pt-5">
 
         <div>
-            <div class="welcome-text text-uppercase" style="font-size: 1.5rem;">Welcome to the</div>
+            <div class="welcome-text text-uppercase" style="font-size: 1.5rem;"><?= SECTION_WELCOME_CONTENTS['preTitleText'] ?></div>
 
             <?php if(SECTION_WELCOME_CONTENTS['isTitleImg']): ?>
             <img class="<?= PREFIX ?>-title-img" src="<?= SECTION_WELCOME_CONTENTS['titleImg'] ?>">
@@ -15,6 +15,7 @@
             </<?= SECTION_WELCOME_CONTENTS['titleTextTag'] ?>>
             <?php endif; ?>
         </div>
+        
 
         <div class="<?= PREFIX ?>-about-text my-5">
             <?= SECTION_WELCOME_CONTENTS['welcomeText'] ?>

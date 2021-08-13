@@ -11,37 +11,37 @@
 
         'items'         => [
             [
-                'title'     => '<span style="font-weight: 800">25% Sold:</span> 10 Skull Kitties Airdropped',
+                'title'     => '<h4 style="font-weight: 800">25% Sold:</h4> 10 Skull Kitties Airdropped',
                 'content'   => [],
                 'position'  => 'right'
             ],
             [
-                'title'     => '<span style="font-weight: 800">50% Sold:</span> Skull Kitties Meme Challenge (1 ETH Pool)',
+                'title'     => '<h4 style="font-weight: 800">50% Sold:</h4> Skull Kitties Meme Challenge (1 ETH Pool)',
                 'content'   => [],
                 'position'  => 'left'
             ],
             [
-                'title'     => '<span style="font-weight: 800">65% Sold:</span> Skull Kitties Art Challenge (2 ETH Pool)',
+                'title'     => '<h4 style="font-weight: 800">65% Sold:</h4> Skull Kitties Art Challenge (2 ETH Pool)',
                 'content'   => [],
                 'position'  => 'right'
             ],
             [
-                'title'     => '<span style="font-weight: 800">75% Sold:</span> Skull Kitties Merch Store Launched',
+                'title'     => '<h4 style="font-weight: 800">75% Sold:</h4> Skull Kitties Merch Store Launched',
                 'content'   => [],
                 'position'  => 'left'
             ],
             [
-                'title'     => '<span style="font-weight: 800">85% Sold:</span> Monthly Skull Kitties NFT Airdrops',
+                'title'     => '<h4 style="font-weight: 800">85% Sold:</h4> Monthly Skull Kitties NFT Airdrops',
                 'content'   => [],
                 'position'  => 'right'
             ],
             [
-                'title'     => '<span style="font-weight: 800">100% Sold:</span> 10 ETH Added to the Community Wallet',
+                'title'     => '<h4 style="font-weight: 800">100% Sold:</h4> 10 ETH Added to the Community Wallet',
                 'content'   => [],
                 'position'  => 'left'
             ],
             [
-                'title'     => '<span style="font-weight: 800">Post Sell Out:</span> Gamification Strategies implemented to drive value to the community',
+                'title'     => '<h4 style="font-weight: 800">Post Sell Out:</h4> Community and value oriented strategies implemented.',
                 'content'   => [],
                 'position'  => 'right'
             ],

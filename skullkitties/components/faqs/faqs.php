@@ -1,6 +1,6 @@
 <div class="<?= PREFIX ?>-bg-white">
     <div id="<?= FAQS_CONTENT['id'] ?>" class="container section-container section-<?= FAQS_CONTENT['id'] ?>" style="padding-bottom: 6rem;">
-        <h5 style="font-weight: normal;">Still have doubts? Check our </h5>
+        <div style="font-weight: normal;">Still have doubts? Check our </div>
 
         <?php if(FAQS_CONTENT['isTitleImg']): ?>
             <img class="mb-4" src="<?= FAQS_CONTENT['titleImg'] ?>">
@@ -29,7 +29,12 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
+                        <?php if($faqItem['type'] != 'text'): ?>
                             <?= call_user_func($faqItem['answer']) ?>
+                        <?php else: ?>
+                            <?= $faqItem['answer'] ?>
+                        <?php endif; ?>
+
 
                         </div>
                     </div>

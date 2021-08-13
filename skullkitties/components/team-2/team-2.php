@@ -1,7 +1,7 @@
 <div class="<?= PREFIX ?>-bg-white">
     <div id="<?= TEAM_CONTENTS['id'] ?>" class="container section-container section-<?= TEAM_CONTENTS['id'] ?> text-center pb-5">
 
-        <h5 style="font-weight: normal;">The</h5>
+        <div style="font-weight: normal;">The</div>
         <?php if(TEAM_CONTENTS['isTitleImg']): ?>
             <img class="mb-4" src="<?= TEAM_CONTENTS['titleImg'] ?>">
         <?php else: ?>
@@ -13,7 +13,7 @@
         <?php endif; ?>
 
 
-        <div class="<?= PREFIX ?>-<?= TEAM_CONTENTS['id'] ?>-container row my-5 align-items-stretch">
+        <div class="<?= PREFIX ?>-<?= TEAM_CONTENTS['id'] ?>-container row mt-5 align-items-stretch">
 
             <?php foreach (TEAM_CONTENTS['members'] as $teamMember): ?>
                 <div class="col-12 col-lg-<?= TEAM_CONTENTS['colSize'] ?> mb-3 px-lg-2 px-1">

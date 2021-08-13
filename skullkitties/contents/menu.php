@@ -5,6 +5,14 @@
 
         'menuItems' => [
             [
+                'text'  => 'Home',
+                'link'  => './#home'
+            ],
+            [
+                'text'  => 'Mint',
+                'link'  => './#mint'
+            ],
+            [
                 'text'  => 'Roadmap',
                 'link'  => './#roadmap'
             ],
@@ -13,12 +21,8 @@
                 'link'  => './#team'
             ],
             [
-                'text'  => 'FAQ',
+                'text'  => 'FAQs',
                 'link'  => './#faq'
-            ],
-            [
-                'text'  => 'Mint',
-                'link'  => '#mint'
             ]
             
         ],

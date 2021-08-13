@@ -10,7 +10,8 @@
     }
     .section-<?= BUY_STRIP_CONTENTS['id'] ?> .<?= PREFIX ?>-<?= BUY_STRIP_CONTENTS['id'] ?>-text-left{
         font-weight: 900;
-        font-style: italic;
+        /* font-style: italic; */
+        /* font-size: rem; */
     }
 
 

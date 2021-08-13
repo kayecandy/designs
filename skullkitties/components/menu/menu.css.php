@@ -69,6 +69,8 @@ button<?= '.' . PREFIX ?>-disconnected-btn{
     align-items: center;
 
     transition: all 0.5s ease-in-out;
+
+    border: 1px solid;
 }
 
 <?= '.' . PREFIX ?>-disconnected-btn::before{

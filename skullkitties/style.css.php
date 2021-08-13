@@ -3,6 +3,18 @@ html, body{
 /* min-width: 320px; */
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Coconut House', sans-serif;;
+}
+
+
+
 body{
     color:white;
     font-family: 'Carmen Sans';
@@ -65,7 +77,7 @@ button.btn-yellow{
 /* Section General Style */
 .section-container{
     /* min-height: 100vh; */
-    padding-top: 6rem;
+    padding-top: 3rem;
     /* padding-bottom: 3rem; */
     position: relative;
 }
