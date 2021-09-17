@@ -1,0 +1,13 @@
+.container {
+  /* background: linear-gradient(135deg, white, white, white, #bbb); */
+}
+
+.row {
+  min-height: calc(100vh - 84px);
+}
+
+.img_col {
+  background: #7f84d6;
+  border-radius: 2rem;
+  border: 4px solid black;
+}

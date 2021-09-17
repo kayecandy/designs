@@ -16,6 +16,7 @@ code {
   padding: 0.3rem 1rem;
   line-height: 200%;
   border-radius: 0.5rem;
+  border: none;
 }
 
 .btn.btn-primary {
