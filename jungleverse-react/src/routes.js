@@ -1,10 +1,10 @@
-import { BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import IndexPage from "./pages";
 import IndexPageV2 from "./pages/v2";
 
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route exact path="/">
           <IndexPage></IndexPage>
@@ -13,6 +13,6 @@ export default function Routes() {
           <IndexPageV2></IndexPageV2>
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
