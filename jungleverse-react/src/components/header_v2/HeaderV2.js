@@ -6,10 +6,10 @@ export default function HeaderV2() {
   return (
     <div className={style.container}>
       <Container>
-        <Row className={`${style.row} align-items-center py-4`}>
+        <Row className={`${style.row} align-items-center py-5 py-md-4 mx-0`}>
           <Col className="text-center mb-4">
             <h1
-              className="mb-4"
+              className="mb-5"
               style={{ fontWeight: 300, letterSpacing: "5px" }}
             >
               Mint a{" "}
@@ -22,7 +22,7 @@ export default function HeaderV2() {
             </h1>
             <SelectWalletButton></SelectWalletButton>
           </Col>
-          <Col className={style.img_col} xs={4}>
+          <Col className={style.img_col} xs={12} md={4}>
             <img
               alt="characters"
               className="w-100"
